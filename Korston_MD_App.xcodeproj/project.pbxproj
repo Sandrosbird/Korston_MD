@@ -3,12 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		764D9AF2257105BE0061F315 /* PerformedImprovementsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764D9AF1257105BE0061F315 /* PerformedImprovementsTableViewController.swift */; };
-		764D9AFA257106CF0061F315 /* PlannedImprovementsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764D9AF9257106CF0061F315 /* PlannedImprovementsTableViewController.swift */; };
+		2F7867B5B2B1DC746D89363C /* Pods_Korston_MD_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D4826622B6F3668A042689 /* Pods_Korston_MD_App.framework */; };
+		304192F07785C4899D1FC696 /* Pods_Korston_MD_App_Korston_MD_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1793E37DE93C1056E210E482 /* Pods_Korston_MD_App_Korston_MD_AppUITests.framework */; };
 		764D9AFF257107150061F315 /* Improvement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764D9AFE257107150061F315 /* Improvement.swift */; };
 		76D323CB2563B3FA007C4B82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D323CA2563B3FA007C4B82 /* AppDelegate.swift */; };
 		76D323CD2563B3FA007C4B82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D323CC2563B3FA007C4B82 /* SceneDelegate.swift */; };
@@ -26,7 +26,6 @@
 		76D3244125652871007C4B82 /* DistrictCountiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D3244025652871007C4B82 /* DistrictCountiesTableViewController.swift */; };
 		76D3244A25652F7A007C4B82 /* CityDistrictTableVIewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D3244925652F7A007C4B82 /* CityDistrictTableVIewController+DataSource.swift */; };
 		76D3245225652FED007C4B82 /* CityDistrictTableViewController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D3245125652FED007C4B82 /* CityDistrictTableViewController+Helpers.swift */; };
-		76D3245F25653559007C4B82 /* StreetUICollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D3245E25653559007C4B82 /* StreetUICollectionViewLayout.swift */; };
 		76D3246A2565384A007C4B82 /* StreetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D324692565384A007C4B82 /* StreetCollectionViewCell.swift */; };
 		76D3246F256668F9007C4B82 /* CountyStreetsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D3246E256668F9007C4B82 /* CountyStreetsCollectionViewController.swift */; };
 		76D32475256669D6007C4B82 /* DistrictCountiesTableViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D32474256669D6007C4B82 /* DistrictCountiesTableViewController+DataSource.swift */; };
@@ -34,6 +33,11 @@
 		76E8CCA32569123B00F7C91D /* StreetsHousesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E8CCA22569123B00F7C91D /* StreetsHousesCollectionViewController.swift */; };
 		76E8CCA82569150800F7C91D /* HouseUICollectionVIewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E8CCA72569150800F7C91D /* HouseUICollectionVIewLayout.swift */; };
 		76E8CCAF2569170D00F7C91D /* HouseUICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E8CCAE2569170D00F7C91D /* HouseUICollectionViewCell.swift */; };
+		76EDFE35257A3966002316FA /* PerformedImprovementsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EDFE34257A3966002316FA /* PerformedImprovementsTableViewController.swift */; };
+		76EDFE3D257A39FC002316FA /* PlannedImprovementsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EDFE3C257A39FC002316FA /* PlannedImprovementsTableViewController.swift */; };
+		76EDFE46257A3A29002316FA /* PlannedImprovementTableVIewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EDFE44257A3A29002316FA /* PlannedImprovementTableVIewCell.swift */; };
+		76EDFE47257A3A29002316FA /* PerformedImprovementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EDFE45257A3A29002316FA /* PerformedImprovementTableViewCell.swift */; };
+		76EDFE4C257A3C6E002316FA /* StreetUICollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EDFE4B257A3C6E002316FA /* StreetUICollectionViewLayout.swift */; };
 		76FD7910256E5F7600948422 /* HousePhotosCollectionVIewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD790F256E5F7600948422 /* HousePhotosCollectionVIewLayout.swift */; };
 		76FD7915256E618800948422 /* HousePhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD7914256E618800948422 /* HousePhotosCollectionViewController.swift */; };
 		76FD791B256F97EA00948422 /* CountyStreetsCollectionViewController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD791A256F97EA00948422 /* CountyStreetsCollectionViewController+Helpers.swift */; };
@@ -44,6 +48,7 @@
 		76FD7944256FB08D00948422 /* Supporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD7943256FB08D00948422 /* Supporter.swift */; };
 		76FD7949256FB2DF00948422 /* SupportersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD7948256FB2DF00948422 /* SupportersTableViewController.swift */; };
 		76FD794E256FB4DE00948422 /* SupporterTableVIewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD794D256FB4DE00948422 /* SupporterTableVIewCell.swift */; };
+		9EEB434C20A464D7396AFB38 /* Pods_Korston_MD_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A34AE4CCA65D29FECE6EAEA /* Pods_Korston_MD_AppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,8 +69,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		764D9AF1257105BE0061F315 /* PerformedImprovementsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformedImprovementsTableViewController.swift; sourceTree = "<group>"; };
-		764D9AF9257106CF0061F315 /* PlannedImprovementsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannedImprovementsTableViewController.swift; sourceTree = "<group>"; };
+		0AA64426591FB3C19CFA0933 /* Pods-Korston_MD_App-Korston_MD_AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Korston_MD_App-Korston_MD_AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Korston_MD_App-Korston_MD_AppUITests/Pods-Korston_MD_App-Korston_MD_AppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		0E7D8C2EE9C0A4F74A780106 /* Pods-Korston_MD_App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Korston_MD_App.debug.xcconfig"; path = "Target Support Files/Pods-Korston_MD_App/Pods-Korston_MD_App.debug.xcconfig"; sourceTree = "<group>"; };
+		1793E37DE93C1056E210E482 /* Pods_Korston_MD_App_Korston_MD_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Korston_MD_App_Korston_MD_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18FB552957CF44141CB01B50 /* Pods-Korston_MD_AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Korston_MD_AppTests.release.xcconfig"; path = "Target Support Files/Pods-Korston_MD_AppTests/Pods-Korston_MD_AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		25D2FFDE52108E3BA2DE7E61 /* Pods-Korston_MD_AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Korston_MD_AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Korston_MD_AppTests/Pods-Korston_MD_AppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2A34AE4CCA65D29FECE6EAEA /* Pods_Korston_MD_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Korston_MD_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		764D9AFE257107150061F315 /* Improvement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Improvement.swift; sourceTree = "<group>"; };
 		76D323C72563B3FA007C4B82 /* Korston_MD_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Korston_MD_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76D323CA2563B3FA007C4B82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,7 +98,6 @@
 		76D3244025652871007C4B82 /* DistrictCountiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictCountiesTableViewController.swift; sourceTree = "<group>"; };
 		76D3244925652F7A007C4B82 /* CityDistrictTableVIewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CityDistrictTableVIewController+DataSource.swift"; sourceTree = "<group>"; };
 		76D3245125652FED007C4B82 /* CityDistrictTableViewController+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CityDistrictTableViewController+Helpers.swift"; sourceTree = "<group>"; };
-		76D3245E25653559007C4B82 /* StreetUICollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetUICollectionViewLayout.swift; sourceTree = "<group>"; };
 		76D324692565384A007C4B82 /* StreetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetCollectionViewCell.swift; sourceTree = "<group>"; };
 		76D3246E256668F9007C4B82 /* CountyStreetsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountyStreetsCollectionViewController.swift; sourceTree = "<group>"; };
 		76D32474256669D6007C4B82 /* DistrictCountiesTableViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DistrictCountiesTableViewController+DataSource.swift"; sourceTree = "<group>"; };
@@ -97,6 +105,11 @@
 		76E8CCA22569123B00F7C91D /* StreetsHousesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetsHousesCollectionViewController.swift; sourceTree = "<group>"; };
 		76E8CCA72569150800F7C91D /* HouseUICollectionVIewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseUICollectionVIewLayout.swift; sourceTree = "<group>"; };
 		76E8CCAE2569170D00F7C91D /* HouseUICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseUICollectionViewCell.swift; sourceTree = "<group>"; };
+		76EDFE34257A3966002316FA /* PerformedImprovementsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformedImprovementsTableViewController.swift; sourceTree = "<group>"; };
+		76EDFE3C257A39FC002316FA /* PlannedImprovementsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlannedImprovementsTableViewController.swift; sourceTree = "<group>"; };
+		76EDFE44257A3A29002316FA /* PlannedImprovementTableVIewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlannedImprovementTableVIewCell.swift; sourceTree = "<group>"; };
+		76EDFE45257A3A29002316FA /* PerformedImprovementTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformedImprovementTableViewCell.swift; sourceTree = "<group>"; };
+		76EDFE4B257A3C6E002316FA /* StreetUICollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetUICollectionViewLayout.swift; sourceTree = "<group>"; };
 		76FD790F256E5F7600948422 /* HousePhotosCollectionVIewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousePhotosCollectionVIewLayout.swift; sourceTree = "<group>"; };
 		76FD7914256E618800948422 /* HousePhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousePhotosCollectionViewController.swift; sourceTree = "<group>"; };
 		76FD791A256F97EA00948422 /* CountyStreetsCollectionViewController+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CountyStreetsCollectionViewController+Helpers.swift"; sourceTree = "<group>"; };
@@ -107,6 +120,9 @@
 		76FD7943256FB08D00948422 /* Supporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supporter.swift; sourceTree = "<group>"; };
 		76FD7948256FB2DF00948422 /* SupportersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportersTableViewController.swift; sourceTree = "<group>"; };
 		76FD794D256FB4DE00948422 /* SupporterTableVIewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupporterTableVIewCell.swift; sourceTree = "<group>"; };
+		A9D4826622B6F3668A042689 /* Pods_Korston_MD_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Korston_MD_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B914E3AA69F28E8D14244280 /* Pods-Korston_MD_App-Korston_MD_AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Korston_MD_App-Korston_MD_AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-Korston_MD_App-Korston_MD_AppUITests/Pods-Korston_MD_App-Korston_MD_AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DFFD7593D15A71CAFDB168B5 /* Pods-Korston_MD_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Korston_MD_App.release.xcconfig"; path = "Target Support Files/Pods-Korston_MD_App/Pods-Korston_MD_App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F7867B5B2B1DC746D89363C /* Pods_Korston_MD_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EEB434C20A464D7396AFB38 /* Pods_Korston_MD_AppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				304192F07785C4899D1FC696 /* Pods_Korston_MD_App_Korston_MD_AppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +160,8 @@
 				76D323E02563B400007C4B82 /* Korston_MD_AppTests */,
 				76D323EB2563B400007C4B82 /* Korston_MD_AppUITests */,
 				76D323C82563B3FA007C4B82 /* Products */,
+				EFD2DA78D025AB6E6A7BF2AC /* Pods */,
+				B6F8215CD2B7E8A06D52D5FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,12 +178,12 @@
 		76D323C92563B3FA007C4B82 /* Korston_MD_App */ = {
 			isa = PBXGroup;
 			children = (
-				76D3240C2563B5E5007C4B82 /* Model */,
-				76D324002563B45A007C4B82 /* VIewControllers */,
-				76D3244825652F58007C4B82 /* Extensions */,
 				76D323CA2563B3FA007C4B82 /* AppDelegate.swift */,
 				76D323CC2563B3FA007C4B82 /* SceneDelegate.swift */,
 				76D323D02563B3FA007C4B82 /* Main.storyboard */,
+				76D3240C2563B5E5007C4B82 /* Model */,
+				76D324002563B45A007C4B82 /* VIewControllers */,
+				76D3244825652F58007C4B82 /* Extensions */,
 				76D323D32563B3FF007C4B82 /* Assets.xcassets */,
 				76D323D52563B3FF007C4B82 /* LaunchScreen.storyboard */,
 				76D323D82563B3FF007C4B82 /* Info.plist */,
@@ -243,7 +264,7 @@
 		76E8CCAC256916DC00F7C91D /* Layout */ = {
 			isa = PBXGroup;
 			children = (
-				76D3245E25653559007C4B82 /* StreetUICollectionViewLayout.swift */,
+				76EDFE4B257A3C6E002316FA /* StreetUICollectionViewLayout.swift */,
 				76E8CCA72569150800F7C91D /* HouseUICollectionVIewLayout.swift */,
 				76FD790F256E5F7600948422 /* HousePhotosCollectionVIewLayout.swift */,
 			);
@@ -266,8 +287,8 @@
 				76D324042563B58D007C4B82 /* CityDistrictTableViewController.swift */,
 				76D3244025652871007C4B82 /* DistrictCountiesTableViewController.swift */,
 				76FD7948256FB2DF00948422 /* SupportersTableViewController.swift */,
-				764D9AF1257105BE0061F315 /* PerformedImprovementsTableViewController.swift */,
-				764D9AF9257106CF0061F315 /* PlannedImprovementsTableViewController.swift */,
+				76EDFE34257A3966002316FA /* PerformedImprovementsTableViewController.swift */,
+				76EDFE3C257A39FC002316FA /* PlannedImprovementsTableViewController.swift */,
 				76FD7952256FB4E300948422 /* Cell */,
 			);
 			path = TableVIew;
@@ -306,9 +327,34 @@
 		76FD7952256FB4E300948422 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				76EDFE45257A3A29002316FA /* PerformedImprovementTableViewCell.swift */,
+				76EDFE44257A3A29002316FA /* PlannedImprovementTableVIewCell.swift */,
 				76FD794D256FB4DE00948422 /* SupporterTableVIewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		B6F8215CD2B7E8A06D52D5FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9D4826622B6F3668A042689 /* Pods_Korston_MD_App.framework */,
+				1793E37DE93C1056E210E482 /* Pods_Korston_MD_App_Korston_MD_AppUITests.framework */,
+				2A34AE4CCA65D29FECE6EAEA /* Pods_Korston_MD_AppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EFD2DA78D025AB6E6A7BF2AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E7D8C2EE9C0A4F74A780106 /* Pods-Korston_MD_App.debug.xcconfig */,
+				DFFD7593D15A71CAFDB168B5 /* Pods-Korston_MD_App.release.xcconfig */,
+				B914E3AA69F28E8D14244280 /* Pods-Korston_MD_App-Korston_MD_AppUITests.debug.xcconfig */,
+				0AA64426591FB3C19CFA0933 /* Pods-Korston_MD_App-Korston_MD_AppUITests.release.xcconfig */,
+				25D2FFDE52108E3BA2DE7E61 /* Pods-Korston_MD_AppTests.debug.xcconfig */,
+				18FB552957CF44141CB01B50 /* Pods-Korston_MD_AppTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +364,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76D323F12563B400007C4B82 /* Build configuration list for PBXNativeTarget "Korston_MD_App" */;
 			buildPhases = (
+				9E9A7489B1D294FD47029325 /* [CP] Check Pods Manifest.lock */,
 				76D323C32563B3FA007C4B82 /* Sources */,
 				76D323C42563B3FA007C4B82 /* Frameworks */,
 				76D323C52563B3FA007C4B82 /* Resources */,
@@ -335,9 +382,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76D323F42563B400007C4B82 /* Build configuration list for PBXNativeTarget "Korston_MD_AppTests" */;
 			buildPhases = (
+				DFA55DF6F6562D43D73C7AB7 /* [CP] Check Pods Manifest.lock */,
 				76D323D92563B400007C4B82 /* Sources */,
 				76D323DA2563B400007C4B82 /* Frameworks */,
 				76D323DB2563B400007C4B82 /* Resources */,
+				BCB28EF65D0DBA83EBD9AB0D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -353,6 +402,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76D323F72563B400007C4B82 /* Build configuration list for PBXNativeTarget "Korston_MD_AppUITests" */;
 			buildPhases = (
+				347266698EB89C25E82E52EE /* [CP] Check Pods Manifest.lock */,
 				76D323E42563B400007C4B82 /* Sources */,
 				76D323E52563B400007C4B82 /* Frameworks */,
 				76D323E62563B400007C4B82 /* Resources */,
@@ -436,14 +486,101 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		347266698EB89C25E82E52EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Korston_MD_App-Korston_MD_AppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E9A7489B1D294FD47029325 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Korston_MD_App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCB28EF65D0DBA83EBD9AB0D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Korston_MD_AppTests/Pods-Korston_MD_AppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Korston_MD_AppTests/Pods-Korston_MD_AppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Korston_MD_AppTests/Pods-Korston_MD_AppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFA55DF6F6562D43D73C7AB7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Korston_MD_AppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		76D323C32563B3FA007C4B82 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				76FD7949256FB2DF00948422 /* SupportersTableViewController.swift in Sources */,
+				76EDFE46257A3A29002316FA /* PlannedImprovementTableVIewCell.swift in Sources */,
 				76D323CB2563B3FA007C4B82 /* AppDelegate.swift in Sources */,
-				764D9AFA257106CF0061F315 /* PlannedImprovementsTableViewController.swift in Sources */,
+				76EDFE47257A3A29002316FA /* PerformedImprovementTableViewCell.swift in Sources */,
 				76D3246A2565384A007C4B82 /* StreetCollectionViewCell.swift in Sources */,
 				76D3244125652871007C4B82 /* DistrictCountiesTableViewController.swift in Sources */,
 				76D324192563B763007C4B82 /* District.swift in Sources */,
@@ -452,12 +589,12 @@
 				76D3247D256669E1007C4B82 /* DistrictCountiesTableViewController+Helpers.swift in Sources */,
 				76D3241E2563B835007C4B82 /* County.swift in Sources */,
 				76FD791B256F97EA00948422 /* CountyStreetsCollectionViewController+Helpers.swift in Sources */,
-				76D3245F25653559007C4B82 /* StreetUICollectionViewLayout.swift in Sources */,
-				764D9AF2257105BE0061F315 /* PerformedImprovementsTableViewController.swift in Sources */,
+				76EDFE4C257A3C6E002316FA /* StreetUICollectionViewLayout.swift in Sources */,
 				76D3240E2563B600007C4B82 /* City.swift in Sources */,
 				76FD793C256F9DA200948422 /* HousePhotosCollectionViewCell.swift in Sources */,
 				76FD7931256F996B00948422 /* StreetsHousesCollectionViewController+Delegate+DataSource.swift in Sources */,
 				76FD7920256F984500948422 /* CountyStreetsCollectionViewController+DataSource.swift in Sources */,
+				76EDFE35257A3966002316FA /* PerformedImprovementsTableViewController.swift in Sources */,
 				76E8CCAF2569170D00F7C91D /* HouseUICollectionViewCell.swift in Sources */,
 				76D32475256669D6007C4B82 /* DistrictCountiesTableViewController+DataSource.swift in Sources */,
 				76FD7944256FB08D00948422 /* Supporter.swift in Sources */,
@@ -466,6 +603,7 @@
 				764D9AFF257107150061F315 /* Improvement.swift in Sources */,
 				76E8CCA32569123B00F7C91D /* StreetsHousesCollectionViewController.swift in Sources */,
 				76FD7915256E618800948422 /* HousePhotosCollectionViewController.swift in Sources */,
+				76EDFE3D257A39FC002316FA /* PlannedImprovementsTableViewController.swift in Sources */,
 				76D323CD2563B3FA007C4B82 /* SceneDelegate.swift in Sources */,
 				76E8CCA82569150800F7C91D /* HouseUICollectionVIewLayout.swift in Sources */,
 				76FD794E256FB4DE00948422 /* SupporterTableVIewCell.swift in Sources */,
@@ -645,6 +783,7 @@
 		};
 		76D323F22563B400007C4B82 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E7D8C2EE9C0A4F74A780106 /* Pods-Korston_MD_App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -665,6 +804,7 @@
 		};
 		76D323F32563B400007C4B82 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFFD7593D15A71CAFDB168B5 /* Pods-Korston_MD_App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -685,6 +825,7 @@
 		};
 		76D323F52563B400007C4B82 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25D2FFDE52108E3BA2DE7E61 /* Pods-Korston_MD_AppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -706,6 +847,7 @@
 		};
 		76D323F62563B400007C4B82 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18FB552957CF44141CB01B50 /* Pods-Korston_MD_AppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -727,6 +869,7 @@
 		};
 		76D323F82563B400007C4B82 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B914E3AA69F28E8D14244280 /* Pods-Korston_MD_App-Korston_MD_AppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -747,6 +890,7 @@
 		};
 		76D323F92563B400007C4B82 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AA64426591FB3C19CFA0933 /* Pods-Korston_MD_App-Korston_MD_AppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

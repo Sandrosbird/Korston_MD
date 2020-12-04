@@ -16,7 +16,7 @@ class StreetUICollectionViewLayout: UICollectionViewLayout {
     private var totalCellsHeight: CGFloat = 0
     
     override func prepare() {
-//        super.prepare()
+        super.prepare()
         self.cacheAttributes = [:]
         guard let collectionView = self.collectionView else { return }
         let itemsCount = collectionView.numberOfItems(inSection: 0)
@@ -31,7 +31,7 @@ class StreetUICollectionViewLayout: UICollectionViewLayout {
         for index in 0 ..< itemsCount {
             let indexPath = IndexPath(item: index, section: 0)
             let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
-            let isBigCell = (index + 1) % (self.columnsCount + 1) == 0
+            let isBigCell = (index + 1) % (self.columnsCount + 1) == 0 || index == itemsCount-1
             
             if isBigCell {
                 attributes.frame = CGRect(x: 0, y: lastY, width: bigCellWidth, height: self.cellHeight)

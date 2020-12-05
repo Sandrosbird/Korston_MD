@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F7867B5B2B1DC746D89363C /* Pods_Korston_MD_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D4826622B6F3668A042689 /* Pods_Korston_MD_App.framework */; };
 		304192F07785C4899D1FC696 /* Pods_Korston_MD_App_Korston_MD_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1793E37DE93C1056E210E482 /* Pods_Korston_MD_App_Korston_MD_AppUITests.framework */; };
 		764D9AFF257107150061F315 /* Improvement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764D9AFE257107150061F315 /* Improvement.swift */; };
 		76D323CB2563B3FA007C4B82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D323CA2563B3FA007C4B82 /* AppDelegate.swift */; };
@@ -38,6 +37,9 @@
 		76EDFE46257A3A29002316FA /* PlannedImprovementTableVIewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EDFE44257A3A29002316FA /* PlannedImprovementTableVIewCell.swift */; };
 		76EDFE47257A3A29002316FA /* PerformedImprovementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EDFE45257A3A29002316FA /* PerformedImprovementTableViewCell.swift */; };
 		76EDFE4C257A3C6E002316FA /* StreetUICollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EDFE4B257A3C6E002316FA /* StreetUICollectionViewLayout.swift */; };
+		76EDFE5F257A4056002316FA /* Pods_Korston_MD_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D4826622B6F3668A042689 /* Pods_Korston_MD_App.framework */; };
+		76EDFE60257A4056002316FA /* Pods_Korston_MD_App.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9D4826622B6F3668A042689 /* Pods_Korston_MD_App.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		76EDFE7B257A4408002316FA /* municipality.db in Resources */ = {isa = PBXBuildFile; fileRef = 76EDFE7A257A4408002316FA /* municipality.db */; };
 		76FD7910256E5F7600948422 /* HousePhotosCollectionVIewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD790F256E5F7600948422 /* HousePhotosCollectionVIewLayout.swift */; };
 		76FD7915256E618800948422 /* HousePhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD7914256E618800948422 /* HousePhotosCollectionViewController.swift */; };
 		76FD791B256F97EA00948422 /* CountyStreetsCollectionViewController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD791A256F97EA00948422 /* CountyStreetsCollectionViewController+Helpers.swift */; };
@@ -67,6 +69,20 @@
 			remoteInfo = Korston_MD_App;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		76EDFE61257A4056002316FA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				76EDFE60257A4056002316FA /* Pods_Korston_MD_App.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0AA64426591FB3C19CFA0933 /* Pods-Korston_MD_App-Korston_MD_AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Korston_MD_App-Korston_MD_AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Korston_MD_App-Korston_MD_AppUITests/Pods-Korston_MD_App-Korston_MD_AppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +126,8 @@
 		76EDFE44257A3A29002316FA /* PlannedImprovementTableVIewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlannedImprovementTableVIewCell.swift; sourceTree = "<group>"; };
 		76EDFE45257A3A29002316FA /* PerformedImprovementTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformedImprovementTableViewCell.swift; sourceTree = "<group>"; };
 		76EDFE4B257A3C6E002316FA /* StreetUICollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreetUICollectionViewLayout.swift; sourceTree = "<group>"; };
+		76EDFE64257A4087002316FA /* SQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76EDFE7A257A4408002316FA /* municipality.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = municipality.db; sourceTree = "<group>"; };
 		76FD790F256E5F7600948422 /* HousePhotosCollectionVIewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousePhotosCollectionVIewLayout.swift; sourceTree = "<group>"; };
 		76FD7914256E618800948422 /* HousePhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousePhotosCollectionViewController.swift; sourceTree = "<group>"; };
 		76FD791A256F97EA00948422 /* CountyStreetsCollectionViewController+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CountyStreetsCollectionViewController+Helpers.swift"; sourceTree = "<group>"; };
@@ -130,7 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F7867B5B2B1DC746D89363C /* Pods_Korston_MD_App.framework in Frameworks */,
+				76EDFE5F257A4056002316FA /* Pods_Korston_MD_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,8 +201,10 @@
 				76D323D02563B3FA007C4B82 /* Main.storyboard */,
 				76D3240C2563B5E5007C4B82 /* Model */,
 				76D324002563B45A007C4B82 /* VIewControllers */,
+				76EDFE56257A3FEC002316FA /* Managers */,
 				76D3244825652F58007C4B82 /* Extensions */,
 				76D323D32563B3FF007C4B82 /* Assets.xcassets */,
+				76EDFE7A257A4408002316FA /* municipality.db */,
 				76D323D52563B3FF007C4B82 /* LaunchScreen.storyboard */,
 				76D323D82563B3FF007C4B82 /* Info.plist */,
 			);
@@ -306,6 +326,13 @@
 			path = CollectionView;
 			sourceTree = "<group>";
 		};
+		76EDFE56257A3FEC002316FA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		76FD7919256F97AF00948422 /* CountyStreetsCollectionViewControllerExtensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +364,7 @@
 		B6F8215CD2B7E8A06D52D5FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				76EDFE64257A4087002316FA /* SQLite.framework */,
 				A9D4826622B6F3668A042689 /* Pods_Korston_MD_App.framework */,
 				1793E37DE93C1056E210E482 /* Pods_Korston_MD_App_Korston_MD_AppUITests.framework */,
 				2A34AE4CCA65D29FECE6EAEA /* Pods_Korston_MD_AppTests.framework */,
@@ -368,6 +396,8 @@
 				76D323C32563B3FA007C4B82 /* Sources */,
 				76D323C42563B3FA007C4B82 /* Frameworks */,
 				76D323C52563B3FA007C4B82 /* Resources */,
+				76EDFE61257A4056002316FA /* Embed Frameworks */,
+				06F39252A801CD945BB6BCA0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -386,7 +416,6 @@
 				76D323D92563B400007C4B82 /* Sources */,
 				76D323DA2563B400007C4B82 /* Frameworks */,
 				76D323DB2563B400007C4B82 /* Resources */,
-				BCB28EF65D0DBA83EBD9AB0D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -406,6 +435,7 @@
 				76D323E42563B400007C4B82 /* Sources */,
 				76D323E52563B400007C4B82 /* Frameworks */,
 				76D323E62563B400007C4B82 /* Resources */,
+				F66C017982C9EE127D8AA5F3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -467,6 +497,7 @@
 				76D323D72563B3FF007C4B82 /* LaunchScreen.storyboard in Resources */,
 				76D323D42563B3FF007C4B82 /* Assets.xcassets in Resources */,
 				76D323D22563B3FA007C4B82 /* Main.storyboard in Resources */,
+				76EDFE7B257A4408002316FA /* municipality.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +518,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		06F39252A801CD945BB6BCA0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Korston_MD_App/Pods-Korston_MD_App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Korston_MD_App/Pods-Korston_MD_App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Korston_MD_App/Pods-Korston_MD_App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		347266698EB89C25E82E52EE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -531,23 +579,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BCB28EF65D0DBA83EBD9AB0D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Korston_MD_AppTests/Pods-Korston_MD_AppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Korston_MD_AppTests/Pods-Korston_MD_AppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Korston_MD_AppTests/Pods-Korston_MD_AppTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		DFA55DF6F6562D43D73C7AB7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -568,6 +599,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F66C017982C9EE127D8AA5F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Korston_MD_App-Korston_MD_AppUITests/Pods-Korston_MD_App-Korston_MD_AppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Korston_MD_App-Korston_MD_AppUITests/Pods-Korston_MD_App-Korston_MD_AppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Korston_MD_App-Korston_MD_AppUITests/Pods-Korston_MD_App-Korston_MD_AppUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

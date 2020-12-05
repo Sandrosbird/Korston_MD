@@ -15,5 +15,6 @@ class CityDistrictTableViewController: UITableViewController {
     //MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        SQLiteManager.shared.get()
     }
 }

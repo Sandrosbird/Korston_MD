@@ -10,15 +10,22 @@ import UIKit
 extension CityDistrictTableViewController {
     //MARK: - Helpers
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        let counties = districtsArray[indexPath.row].counties
-        countiesTransfer(counties: counties)
+        let id = districtsArray[indexPath.row].id
+        idTransfer(id: id)
         return indexPath
     }
     
-    private func countiesTransfer(counties: [County]) {
+    private func idTransfer(id: Int) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let destination = storyboard.instantiateViewController(identifier: "DistrictCountiesTableViewController") as? DistrictCountiesTableViewController else { return }
-        destination.countiesArray = counties
+        destination.id = id
         show(destination, sender: nil)
     }
+    
+//    private func countiesTransfer(counties: [County]) {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        guard let destination = storyboard.instantiateViewController(identifier: "DistrictCountiesTableViewController") as? DistrictCountiesTableViewController else { return }
+//        destination.countiesArray = counties
+//        show(destination, sender: nil)
+//    }
 }

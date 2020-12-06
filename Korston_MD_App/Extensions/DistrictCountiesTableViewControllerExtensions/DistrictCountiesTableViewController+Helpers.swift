@@ -11,8 +11,8 @@ extension DistrictCountiesTableViewController {
     //MARK: - Helpers
     
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        let streets = countiesArray[indexPath.row].streets
-        streetsTransfer(streets: streets)
+        let streets = countiesArray[indexPath.row]
+//        streetsTransfer(streets: streets)
         return indexPath
     }
     

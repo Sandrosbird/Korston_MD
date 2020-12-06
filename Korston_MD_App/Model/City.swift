@@ -12,11 +12,11 @@ struct City {
     let districts: [District]
 }
 
-class CityFactory {
-    
-    func createCity() -> City {
-        let kazanCity = City(name: "Kazan", districts: DistrictFactory.createDistricts())
-        
-        return kazanCity
-    }
-}
+//class CityFactory {
+//    
+//    func createCity() -> City {
+//        let kazanCity = City(name: "Kazan", districts: DistrictFactory.createDistricts())
+//        
+//        return kazanCity
+//    }
+//}

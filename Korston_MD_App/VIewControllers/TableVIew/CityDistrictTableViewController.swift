@@ -6,15 +6,16 @@
 //
 
 import UIKit
+import FMDB
 
 class CityDistrictTableViewController: UITableViewController {
     
     //MARK: - Properties
-    var districtsArray: [District] = DistrictFactory.createDistricts()
+    let databaseManager = DatabaseManager.shared
+    var districtsArray: [District] = DatabaseManager.shared.readDistricts()
 
     //MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        SQLiteManager.shared.get()
     }
 }

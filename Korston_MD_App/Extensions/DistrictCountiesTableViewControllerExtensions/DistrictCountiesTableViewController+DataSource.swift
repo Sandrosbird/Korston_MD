@@ -22,9 +22,8 @@ extension DistrictCountiesTableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DistrictCountyCell", for: indexPath)
-        cell.textLabel?.text = countiesArray[indexPath.row].name
-        
-
+        let number = countiesArray[indexPath.row].name
+        cell.textLabel?.text = "Округ № \(number)"
         return cell
     }
 }

@@ -12,10 +12,11 @@ class CityDistrictTableViewController: UITableViewController {
     
     //MARK: - Properties
     let databaseManager = DatabaseManager.shared
-    var districtsArray: [District] = DatabaseManager.shared.readDistricts()
+    var districtsArray: [District] = []
 
     //MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        districtsArray = databaseManager.readDistricts()
     }
 }

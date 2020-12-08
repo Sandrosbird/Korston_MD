@@ -23,16 +23,19 @@ extension StreetsHousesCollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let houseId = housesArray[indexPath.row].id
+        photosArray = databaseManager.readHousePhotos(id: houseId)
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? HouseUICollectionViewCell else { return UICollectionViewCell() }
-        let type = housesArray[indexPath.row].type
-        let number = housesArray[indexPath.row].number
-        let entranses = housesArray[indexPath.row].entranses
-        let storeys = housesArray[indexPath.row].numberOfStoreys
-        let apartments = housesArray[indexPath.row].numberOfApartments
-        let company = housesArray[indexPath.row].managementCompany
+        let number = housesArray[indexPath.row].houseNumber
         
-        cell.houseName?.text = "\(type) №\(number) подъездов:\(entranses) \(storeys) этажей \(apartments) квартир\nУК:\(company)"
-        cell.houseImage?.image = housesArray[indexPath.row].photoes[0]
+        photosArray = databaseManager.readHousePhotos(id: houseId)
+        
+        cell.houseName?.text = "Дом № \(number)"
+        if !photosArray.isEmpty {
+            cell.houseImage?.image = photosArray[0]
+        } else {
+            cell.houseImage?.image = UIImage(named: "nodata")
+        }
         
         return cell
     }
@@ -42,25 +45,26 @@ extension StreetsHousesCollectionViewController {
         let configuration = UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { (actions) -> UIMenu? in
             let photo = UIAction(title: "Фотографии", image: UIImage(systemName: "photo.fill"), attributes: [], state: .off) { (action) in
                 guard let destination = self.storyboard?.instantiateViewController(identifier: "HousePhotosCollectionViewController") as? HousePhotosCollectionViewController else { return }
-                destination.photosArray = self.housesArray[indexPath.row].photoes
+                let houseId = self.housesArray[indexPath.row].id
+                destination.id = houseId
                 self.show(destination, sender: nil)
             }
             
             let supporters = UIAction(title: "Актив и сторонники", image: UIImage(systemName: "person.2"), attributes: [], state: .off) { (action) in
                 guard let destination = self.storyboard?.instantiateViewController(identifier: "SupportersTableViewController") as? SupportersTableViewController else { return }
-                destination.supportersArray = self.housesArray[indexPath.row].supporters
+//                destination.supportersArray = self.housesArray[indexPath.row].supporters
                 self.show(destination, sender: nil)
             }
             
             let performedImprovements = UIAction(title: "Произведенные работы по благоустройству", image: UIImage(systemName: "archivebox.fill"), attributes: [], state: .off) { (action) in
                 guard let destination = self.storyboard?.instantiateViewController(identifier: "PerformedImprovementsTableViewController") as? PerformedImprovementsTableViewController else { return }
-                destination.improvementsArray = self.housesArray[indexPath.row].performedImprovements
+//                destination.improvementsArray = self.housesArray[indexPath.row].performedImprovements
                 self.show(destination, sender: nil)
             }
             
             let plannedImprovements = UIAction(title: "Запланированные работы по благоустройству", image: UIImage(systemName: "doc.fill"), attributes: [], state: .off) { (action) in
                 guard let destination = self.storyboard?.instantiateViewController(identifier: "PlannedImprovementsTableViewController") as? PlannedImprovementsTableViewController else { return }
-                destination.improvementsArray = self.housesArray[indexPath.row].plannedImprovements
+//                destination.improvementsArray = self.housesArray[indexPath.row].plannedImprovements
                 self.show(destination, sender: nil)
             }
             

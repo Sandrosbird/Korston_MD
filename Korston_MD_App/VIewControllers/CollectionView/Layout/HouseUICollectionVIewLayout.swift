@@ -10,8 +10,7 @@ import UIKit
 class HouseUICollectionVIewLayout: UICollectionViewLayout {
     //MARK: - Properties
     var cacheAttributes = [IndexPath: UICollectionViewLayoutAttributes]()
-    var columnsCount = 2
-    var cellHeight: CGFloat = 200
+    var cellHeight: CGFloat = 250
     private var totalCellsHeight: CGFloat = 0
     
     override func prepare() {
@@ -22,9 +21,7 @@ class HouseUICollectionVIewLayout: UICollectionViewLayout {
         guard itemsCount > 0 else { return }
         
         let bigCellWidth = collectionView.frame.width
-        let smallCellWidth = collectionView.frame.width / CGFloat(self.columnsCount)
         
-        var lastX: CGFloat = 0
         var lastY: CGFloat = 0
         
         for index in 0 ..< itemsCount {

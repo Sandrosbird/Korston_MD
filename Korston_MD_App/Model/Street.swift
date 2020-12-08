@@ -7,10 +7,18 @@
 
 import UIKit
 
-struct Street {
-    let name: String
-    let image: UIImage?
-    let houses: [House]
+class Street {
+    let id: Int
+    let streetName: String
+    let districtId: Int
+    let localDistrictId: Int
+    
+    init(id: Int, streetName: String, districtId: Int, localDistrictId: Int) {
+        self.id = id
+        self.streetName = streetName
+        self.districtId = districtId
+        self.localDistrictId = localDistrictId
+    }
 }
 
 //class StreetFactory {

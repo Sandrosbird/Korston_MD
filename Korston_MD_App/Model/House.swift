@@ -7,17 +7,17 @@
 
 import UIKit
 
-struct House {
-    let type: String
-    let number: Int
-    let entranses: Int
-    let numberOfStoreys: Int
-    let numberOfApartments: Int
-    let managementCompany: String
-    let photoes: [UIImage]
-    let supporters: [Supporter]
-    let plannedImprovements: [Improvement]
-    let performedImprovements: [Improvement]
+class House {
+    let id, districtId, localDistrictId, streetId: Int
+    let houseNumber: String
+    
+    init(id:Int, houseNumber:String, districtId:Int, localDistrictId:Int, streetId:Int) {
+        self.id = id
+        self.houseNumber = houseNumber
+        self.districtId = districtId
+        self.localDistrictId = localDistrictId
+        self.streetId = streetId
+    }
 }
 
 

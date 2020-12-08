@@ -11,11 +11,14 @@ import UIKit
 class StreetsHousesCollectionViewController: UICollectionViewController {
     //MARK: - Properties
     let reuseIdentifier = "HouseUICollectionViewCell"
-
+    let databaseManager = DatabaseManager.shared
+    var id = 0
     var housesArray: [House] = []
+    var photosArray: [UIImage] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        housesArray = databaseManager.readHouses(id: id)
     }
 
     /*

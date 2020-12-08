@@ -11,21 +11,25 @@ class HousePhotosCollectionViewController: UICollectionViewController {
     
     //MARK: - Properties
     let reuseIdentifier = "HousePhotoCollectionViewCell"
+    let databaseManager = DatabaseManager.shared
+    var id = 0
+    
     var photosArray: [UIImage] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        DispatchQueue.global().async {
+            self.photosArray = self.databaseManager.readHousePhotos(id: self.id)
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
+        
     }
 
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    
 
     // MARK: UICollectionViewDataSource
 
@@ -49,7 +53,12 @@ class HousePhotosCollectionViewController: UICollectionViewController {
     }
 
     // MARK: UICollectionViewDelegate
-
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let destination = storyboard.instantiateViewController(identifier: "DetailPhotoViewController") as? DetailPhotoViewController else { return }
+        destination.image = self.photosArray[indexPath.row]
+        show(destination, sender: nil)
+    }
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {

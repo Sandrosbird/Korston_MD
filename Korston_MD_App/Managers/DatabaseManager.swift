@@ -19,8 +19,41 @@ final class DatabaseManager {
     let databasePath = "municipality.db"
     var database: OpaquePointer? = nil
     
+    func copyDatabaseIfNeeded() {
+        // Move database file from bundle to documents folder
+        
+        let fileManager = FileManager.default
+        
+        let documentsUrl = fileManager.urls(for: .documentDirectory,
+                                            in: .userDomainMask)
+        
+        guard documentsUrl.count != 0 else {
+            return // Could not find documents URL
+        }
+        
+        let finalDatabaseURL = documentsUrl.first!.appendingPathComponent(databasePath)
+        
+        if !( (try? finalDatabaseURL.checkResourceIsReachable()) ?? false) {
+            print("DB does not exist in documents folder")
+            
+            let documentsURL = Bundle.main.resourceURL?.appendingPathComponent(databasePath)
+            
+            do {
+                try fileManager.copyItem(atPath: (documentsURL?.path)!, toPath: finalDatabaseURL.path)
+            } catch let error as NSError {
+                print("Couldn't copy file to final location! Error:\(error.description)")
+            }
+            
+        } else {
+            print("Database file found at path: \(finalDatabaseURL.path)")
+        }
+        
+    }
+    
     func openDatabase() -> OpaquePointer? {
+        copyDatabaseIfNeeded()
         let fileUrl = try! fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent(databasePath)
+        print(fileUrl)
         var database: OpaquePointer? = nil
         if sqlite3_open(fileUrl.path, &database) != SQLITE_OK {
             print("Error opening DB")
@@ -32,26 +65,25 @@ final class DatabaseManager {
     }
     
     func readDistricts() -> [District] {
-        let queryStatementString = "SELECT id, district_name FROM districts"
+        let queryStatementString = "SELECT * FROM districts"
         var queryStatement: OpaquePointer? = nil
         var districts: [District] = []
         
         if sqlite3_prepare_v2(database, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
             while sqlite3_step(queryStatement) == SQLITE_ROW {
-                let id = sqlite3_column_int(queryStatement, 0)
+                let id = Int(sqlite3_column_int(queryStatement, 0))
                 let name = String(describing: String(cString: sqlite3_column_text(queryStatement, 1)))
-                districts.append(District(name: name, id: Int(id)))
+                districts.append(District(name: name, id: id))
             }
         } else {
             print("SELECT statement could not be completed")
         }
-//        print("Districts: \(districts[0].name), \(districts[1].name)")
         sqlite3_finalize(queryStatement)
         return districts
     }
     
     func readCounties(id: Int) -> [County] {
-        let queryStatementString = "SELECT id, local_district_name, district_id FROM local_districts WHERE district_id = \(id)"
+        let queryStatementString = "SELECT * FROM local_districts WHERE district_id = \(id)"
         var queryStatement: OpaquePointer? = nil
         var counties: [County] = []
         
@@ -66,20 +98,70 @@ final class DatabaseManager {
             print("SELECT statement could not be completed")
         }
         
-        //For debug
-        for i in counties {
-            print(i.name)
-        }
-        
         sqlite3_finalize(queryStatement)
         return counties
     }
     
+    func readStreets(id: Int) -> [Street] {
+        let queryStatementString = "SELECT * FROM streets WHERE local_district_id = \(id)"
+        var queryStatement: OpaquePointer? = nil
+        var streets: [Street] = []
+        
+        if sqlite3_prepare_v2(database, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
+            while sqlite3_step(queryStatement) == SQLITE_ROW {
+                let id = Int(sqlite3_column_int(queryStatement, 0))
+                let name = String(describing: String(cString: sqlite3_column_text(queryStatement, 1)))
+                let districtId = Int(sqlite3_column_int(queryStatement, 2))
+                let localDistrictID = Int(sqlite3_column_int(queryStatement, 3))
+                streets.append(Street(id: id, streetName: name, districtId: districtId, localDistrictId: localDistrictID))
+            }
+        } else {
+            print("SELECT statement could not be completed")
+        }
+        
+        sqlite3_finalize(queryStatement)
+        return streets
+    }
     
+    func readHouses(id: Int) -> [House] {
+        let queryStatementString = "SELECT * FROM houses WHERE street_id = \(id)"
+        var queryStatement: OpaquePointer? = nil
+        var houses: [House] = []
+        
+        if sqlite3_prepare_v2(database, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
+            while sqlite3_step(queryStatement) == SQLITE_ROW {
+                let id = Int(sqlite3_column_int(queryStatement, 0))
+                let houseNumber = String(describing: String(cString: sqlite3_column_text(queryStatement, 1)))
+                let districtId = Int(sqlite3_column_int(queryStatement, 2))
+                let localDistrictId = Int(sqlite3_column_int(queryStatement, 3))
+                let streetId = Int(sqlite3_column_int(queryStatement, 4))
+                houses.append(House(id: id, houseNumber: houseNumber, districtId: districtId, localDistrictId: localDistrictId, streetId: streetId))
+            }
+        } else {
+            print("SELECT statement could not be completed")
+        }
+        print(houses)
+        sqlite3_finalize(queryStatement)
+        return houses
+    }
     
-    
-    
-    
-    
+    func readHousePhotos(id: Int) -> [UIImage] {
+        let queryStatementString = "SELECT * FROM house_pictures WHERE house_id = \(id)"
+        var queryStatement: OpaquePointer? = nil
+        var houseImages: [UIImage] = []
+        
+        if sqlite3_prepare_v2(database, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
+            while sqlite3_step(queryStatement) == SQLITE_ROW {
+                let id = Int(sqlite3_column_int(queryStatement, 0))
+                let fileName = String(describing: String(cString: sqlite3_column_text(queryStatement, 1)))
+                let houseId = Int(sqlite3_column_int(queryStatement, 2))
+                houseImages.append(UIImage(named: fileName) ?? UIImage(named: "nodata")!)
+            }
+        } else {
+            print("SELECT statement could not be completed")
+        }
+        sqlite3_finalize(queryStatement)
+        return houseImages
+    }
     
 }

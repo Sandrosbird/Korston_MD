@@ -11,15 +11,16 @@ extension DistrictCountiesTableViewController {
     //MARK: - Helpers
     
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        let streets = countiesArray[indexPath.row]
-//        streetsTransfer(streets: streets)
+//        let streets = countiesArray[indexPath.row]
+        let id = countiesArray[indexPath.row].id
+        idTransfer(id: id)
         return indexPath
     }
     
-    private func streetsTransfer(streets: [Street]) {
+    private func idTransfer(id: Int) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let destination = storyboard.instantiateViewController(identifier: "CountyStreetsCollectionViewController") as? CountyStreetsCollectionViewController else { return }
-        destination.streetsArray = streets
+        guard let destination = storyboard.instantiateViewController(identifier: "CountyStreetsTableViewController") as? CountyStreetsTableViewController else { return }
+        destination.id = id
         show(destination, sender: nil)
     }
 }

@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -100,34 +101,18 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="NRq-mu-Uld"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
+                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                             <color key="shadowColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                             <size key="shadowOffset" width="1" height="1"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PFy-EW-5ut">
-                                            <rect key="frame" x="297" y="10" width="20" height="20"/>
-                                            <accessibility key="accessibilityConfiguration">
-                                                <accessibilityTraits key="traits" image="YES"/>
-                                            </accessibility>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="20" id="ePF-AP-cNO"/>
-                                                <constraint firstAttribute="width" constant="20" id="zXQ-8P-wd0"/>
-                                            </constraints>
-                                            <size key="titleShadowOffset" width="3" height="4"/>
-                                            <state key="normal" image="check">
-                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="small" weight="regular"/>
-                                            </state>
-                                        </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="PFy-EW-5ut" secondAttribute="trailing" constant="5" id="7cB-dr-9E3"/>
                                         <constraint firstItem="mPt-6f-rPS" firstAttribute="leading" secondItem="5bz-Cj-DAu" secondAttribute="leading" id="8cz-P2-sUw"/>
                                         <constraint firstItem="mPt-6f-rPS" firstAttribute="top" secondItem="5bz-Cj-DAu" secondAttribute="top" constant="5" id="MeO-ug-mkL"/>
                                         <constraint firstAttribute="bottom" secondItem="mPt-6f-rPS" secondAttribute="bottom" constant="30" id="VX8-e7-VnM"/>
                                         <constraint firstAttribute="trailing" secondItem="mPt-6f-rPS" secondAttribute="trailing" id="b14-k1-M6y"/>
-                                        <constraint firstItem="PFy-EW-5ut" firstAttribute="top" secondItem="5bz-Cj-DAu" secondAttribute="top" constant="10" id="hqc-YS-4HJ"/>
                                         <constraint firstAttribute="bottom" secondItem="C9x-Lw-VES" secondAttribute="bottom" id="muD-K2-79n"/>
                                         <constraint firstAttribute="trailing" secondItem="C9x-Lw-VES" secondAttribute="trailing" constant="5" id="tzm-ph-VL7"/>
                                         <constraint firstItem="C9x-Lw-VES" firstAttribute="leading" secondItem="5bz-Cj-DAu" secondAttribute="leading" constant="5" id="u5i-Hc-QJU"/>
@@ -223,27 +208,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewLayout key="collectionViewLayout" id="IJW-mH-HXO" customClass="HousePhotosCollectionVIewLayout" customModule="Korston_MD_App" customModuleProvider="target"/>
+                        <collectionViewLayout key="collectionViewLayout" id="sA8-WB-Ca7" customClass="HousePhotosCollectionVIewLayout" customModule="Korston_MD_App" customModuleProvider="target"/>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HousePhotoCollectionViewCell" id="GDV-h2-sk4" customClass="HousePhotosCollectionViewCell" customModule="Korston_MD_App" customModuleProvider="target">
-                                <rect key="frame" x="92" y="0.0" width="191" height="142"/>
+                                <rect key="frame" x="3.6666666666666665" y="0.0" width="368" height="221"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xsc-eS-E5s">
-                                    <rect key="frame" x="0.0" y="0.0" width="191" height="142"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="368" height="221"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sHh-Tz-2En">
-                                            <rect key="frame" x="5" y="0.0" width="181" height="142"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sHh-Tz-2En">
+                                            <rect key="frame" x="2" y="2" width="364" height="217"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="sHh-Tz-2En" secondAttribute="trailing" constant="5" id="A25-8P-hzJ"/>
-                                        <constraint firstAttribute="bottom" secondItem="sHh-Tz-2En" secondAttribute="bottom" id="OLs-7c-fhR"/>
-                                        <constraint firstItem="sHh-Tz-2En" firstAttribute="top" secondItem="xsc-eS-E5s" secondAttribute="top" id="uPZ-Dn-h5t"/>
-                                        <constraint firstItem="sHh-Tz-2En" firstAttribute="leading" secondItem="xsc-eS-E5s" secondAttribute="leading" constant="5" id="vjS-NK-Oyi"/>
+                                        <constraint firstAttribute="trailing" secondItem="sHh-Tz-2En" secondAttribute="trailing" constant="2" id="A25-8P-hzJ"/>
+                                        <constraint firstAttribute="bottom" secondItem="sHh-Tz-2En" secondAttribute="bottom" constant="2" id="OLs-7c-fhR"/>
+                                        <constraint firstItem="sHh-Tz-2En" firstAttribute="top" secondItem="xsc-eS-E5s" secondAttribute="top" constant="2" id="uPZ-Dn-h5t"/>
+                                        <constraint firstItem="sHh-Tz-2En" firstAttribute="leading" secondItem="xsc-eS-E5s" secondAttribute="leading" constant="2" id="vjS-NK-Oyi"/>
                                     </constraints>
                                 </collectionViewCellContentView>
-                                <size key="customSize" width="191" height="142"/>
+                                <size key="customSize" width="368" height="221"/>
                                 <connections>
                                     <outlet property="housePhoto" destination="sHh-Tz-2En" id="tiJ-QI-Fav"/>
                                 </connections>
@@ -257,7 +242,36 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lWJ-UH-sjj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3345" y="-819"/>
+            <point key="canvasLocation" x="3344.8000000000002" y="-819.45812807881782"/>
+        </scene>
+        <!--Галерея-->
+        <scene sceneID="Qqu-zB-1I1">
+            <objects>
+                <viewController storyboardIdentifier="DetailPhotoViewController" title="Галерея" modalTransitionStyle="crossDissolve" id="qKa-Xn-saQ" customClass="DetailPhotoViewController" customModule="Korston_MD_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JG5-N2-9Nk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MZb-V9-srS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PdZ-GD-Ue1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MZb-V9-srS" firstAttribute="top" secondItem="JG5-N2-9Nk" secondAttribute="top" id="1bD-5F-hMQ"/>
+                            <constraint firstAttribute="trailing" secondItem="MZb-V9-srS" secondAttribute="trailing" id="67N-4W-IOm"/>
+                            <constraint firstAttribute="bottom" secondItem="MZb-V9-srS" secondAttribute="bottom" id="WkS-Bp-gu3"/>
+                            <constraint firstItem="MZb-V9-srS" firstAttribute="leading" secondItem="JG5-N2-9Nk" secondAttribute="leading" id="cjs-gu-RbE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="houseImage" destination="MZb-V9-srS" id="o5g-sK-qek"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qTA-wB-nu2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4106" y="-819"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="w9B-2g-enw">
@@ -328,7 +342,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kdj-3Z-SIL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1792.8" y="-140.39408866995075"/>
+            <point key="canvasLocation" x="1665" y="-1957"/>
         </scene>
         <!--Актив и сторонники-->
         <scene sceneID="XGO-6F-lkU">
@@ -466,9 +480,37 @@
             </objects>
             <point key="canvasLocation" x="3344.8000000000002" y="1246.5517241379312"/>
         </scene>
+        <!--Выбор улицы-->
+        <scene sceneID="WMO-GE-90u">
+            <objects>
+                <tableViewController storyboardIdentifier="CountyStreetsTableViewController" title="Выбор улицы" modalTransitionStyle="flipHorizontal" id="k6o-OF-dja" customClass="CountyStreetsTableViewController" customModule="Korston_MD_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SYq-kD-uvx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CountyStreetTableViewCell" id="7qr-c1-nS8">
+                                <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7qr-c1-nS8" id="Oti-fX-KYt">
+                                    <rect key="frame" x="0.0" y="0.0" width="347.66666666666669" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="k6o-OF-dja" id="ggO-di-WR0"/>
+                            <outlet property="delegate" destination="k6o-OF-dja" id="Om8-E1-LBF"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Выбор улицы" id="hUX-qm-ofc"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bhU-Xm-89H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1764" y="-140"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="check" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

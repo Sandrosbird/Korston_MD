@@ -52,20 +52,48 @@ extension StreetsHousesCollectionViewController {
             
             let supporters = UIAction(title: "Актив и сторонники", image: UIImage(systemName: "person.2"), attributes: [], state: .off) { (action) in
                 guard let destination = self.storyboard?.instantiateViewController(identifier: "SupportersTableViewController") as? SupportersTableViewController else { return }
-//                destination.supportersArray = self.housesArray[indexPath.row].supporters
-                self.show(destination, sender: nil)
+                var supportersArray: [Supporter] = []
+                let houseId = self.housesArray[indexPath.row].id
+                DispatchQueue.global().async {
+                    supportersArray = self.databaseManager.readSupporters(id: houseId)
+                    destination.id = houseId
+                    destination.supportersArray = supportersArray
+                    DispatchQueue.main.async {
+                        self.show(destination, sender: nil)
+                    }
+                }
             }
             
             let performedImprovements = UIAction(title: "Произведенные работы по благоустройству", image: UIImage(systemName: "archivebox.fill"), attributes: [], state: .off) { (action) in
                 guard let destination = self.storyboard?.instantiateViewController(identifier: "PerformedImprovementsTableViewController") as? PerformedImprovementsTableViewController else { return }
-//                destination.improvementsArray = self.housesArray[indexPath.row].performedImprovements
-                self.show(destination, sender: nil)
+                
+                let houseId = self.housesArray[indexPath.row].id
+                var improvementsArray: [Improvement] = []
+                DispatchQueue.global().async {
+                    improvementsArray = self.databaseManager.readImprovements(id: houseId, type: .jobsDone)
+                    destination.id = houseId
+                    destination.improvementsArray = improvementsArray
+                    DispatchQueue.main.async {
+                        self.show(destination, sender: nil)
+
+                    }
+                }
             }
             
             let plannedImprovements = UIAction(title: "Запланированные работы по благоустройству", image: UIImage(systemName: "doc.fill"), attributes: [], state: .off) { (action) in
-                guard let destination = self.storyboard?.instantiateViewController(identifier: "PlannedImprovementsTableViewController") as? PlannedImprovementsTableViewController else { return }
-//                destination.improvementsArray = self.housesArray[indexPath.row].plannedImprovements
-                self.show(destination, sender: nil)
+                guard let destination = self.storyboard?.instantiateViewController(identifier: "PerformedImprovementsTableViewController") as? PerformedImprovementsTableViewController else { return }
+                
+                let houseId = self.housesArray[indexPath.row].id
+                var improvementsArray: [Improvement] = []
+                DispatchQueue.global().async {
+                    improvementsArray = self.databaseManager.readImprovements(id: houseId, type: .plannedJobs)
+                    destination.id = houseId
+                    destination.improvementsArray = improvementsArray
+                    DispatchQueue.main.async {
+                        self.show(destination, sender: nil)
+
+                    }
+                }
             }
             
             return UIMenu(title: "Меню", options: [], children: [photo, supporters, performedImprovements, plannedImprovements])

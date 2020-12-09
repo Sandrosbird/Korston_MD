@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import FMDB
 
 class CityDistrictTableViewController: UITableViewController {
     

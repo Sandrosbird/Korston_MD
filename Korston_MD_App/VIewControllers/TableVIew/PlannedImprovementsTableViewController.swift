@@ -10,6 +10,7 @@ import UIKit
 class PlannedImprovementsTableViewController: UITableViewController {
 
     //MARK: - Properties
+    var id = 0
     var improvementsArray: [Improvement] = []
     
     override func viewDidLoad() {

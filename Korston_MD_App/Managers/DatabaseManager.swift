@@ -164,4 +164,59 @@ final class DatabaseManager {
         return houseImages
     }
     
+    func readSupporters(id: Int) -> [Supporter] {
+        let queryStatementString = "SELECT * FROM house_roomers WHERE house_id = \(id)"
+        var queryStatement: OpaquePointer? = nil
+        var supporters: [Supporter] = []
+        
+        if sqlite3_prepare_v2(database, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
+            while sqlite3_step(queryStatement) == SQLITE_ROW {
+                let id = Int(sqlite3_column_int(queryStatement, 0))
+                let name = String(describing: String(cString: sqlite3_column_text(queryStatement, 1)))
+                let apartment = String(describing: String(cString: sqlite3_column_text(queryStatement, 2)))
+                let phone = String(describing: String(cString: sqlite3_column_text(queryStatement, 3)))
+                let email = String(describing: String(cString: sqlite3_column_text(queryStatement, 4)))
+                let houseId = Int(sqlite3_column_int(queryStatement, 5))
+                supporters.append(Supporter(id: id, name: name, apartment: apartment, phone: phone, email: email, houseId: houseId))
+            }
+        } else {
+            print("SELECT statement could not be completed")
+        }
+        sqlite3_finalize(queryStatement)
+        return supporters
+    }
+    
+    enum ImprovementType {
+        case jobsDone, plannedJobs
+    }
+    
+    func readImprovements(id: Int, type: ImprovementType) -> [Improvement] {
+        var queryStatementString = ""
+        switch type {
+        case .jobsDone:
+            queryStatementString = "SELECT * FROM house_jobs_done WHERE house_id = \(id)"
+        case .plannedJobs:
+            queryStatementString = "SELECT * FROM house_jobs_not_done WHERE house_id = \(id)"
+        default:
+            queryStatementString = "SELECT * FROM house_jobs_done WHERE house_id = \(id)"
+        }
+       
+        var queryStatement: OpaquePointer? = nil
+        var improvements: [Improvement] = []
+        
+        if sqlite3_prepare_v2(database, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
+            while sqlite3_step(queryStatement) == SQLITE_ROW {
+                let id = Int(sqlite3_column_int(queryStatement, 0))
+                let name = String(describing: String(cString: sqlite3_column_text(queryStatement, 1)))
+                let date = String(describing: String(cString: sqlite3_column_text(queryStatement, 2)))
+                let contractor = String(describing: String(cString: sqlite3_column_text(queryStatement, 3)))
+                let houseId = Int(sqlite3_column_int(queryStatement, 4))
+                improvements.append(Improvement(id: id, workName: name, date: date, contractor: contractor, houseId: houseId))
+            }
+        } else {
+            print("SELECT statement could not be completed")
+        }
+        sqlite3_finalize(queryStatement)
+        return improvements
+    }
 }

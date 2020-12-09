@@ -11,6 +11,7 @@ class PerformedImprovementsTableViewController: UITableViewController {
 
     //MARK: - Properties
     var improvementsArray: [Improvement] = []
+    var id = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()

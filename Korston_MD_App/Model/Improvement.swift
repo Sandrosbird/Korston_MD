@@ -7,10 +7,20 @@
 
 import UIKit
 
-struct Improvement {
-    let date: String
+class Improvement {
+    let id: Int
     let workName: String
+    let date: String
     let contractor: String
+    let houseId: Int
+    
+    init(id: Int, workName: String, date: String, contractor: String, houseId: Int) {
+        self.id = id
+        self.workName = workName
+        self.date = date
+        self.contractor = contractor
+        self.houseId = houseId
+    }
 }
 
 //final class ImprovementsFactory {

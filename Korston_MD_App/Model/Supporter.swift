@@ -7,11 +7,22 @@
 
 import Foundation
 
-struct Supporter {
+class Supporter {
+    var id: Int
     var name: String
-    var apartment: Int
+    var apartment: String
     var phone: String
     var email: String
+    var houseId: Int
+    
+    init(id: Int, name: String, apartment: String, phone: String, email: String, houseId: Int){
+        self.id = id
+        self.name = name
+        self.apartment = apartment
+        self.phone = phone
+        self.email = email
+        self.houseId = houseId
+    }
 }
 
 //final class SupporterFactory {

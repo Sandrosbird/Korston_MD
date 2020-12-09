@@ -11,6 +11,7 @@ class SupportersTableViewController: UITableViewController {
 
     //MARK: - Properties
     var reuseIdentifier = "SupporterTableViewCell"
+    var id = 0
     var supportersArray: [Supporter] = []
     
     override func viewDidLoad() {

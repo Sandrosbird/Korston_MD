@@ -9,14 +9,23 @@ import UIKit
 
 class DistrictCountiesTableViewController: UITableViewController {
     
+    @IBOutlet weak var addbuttonItem: UIBarButtonItem!
     //MARK: - Properties
-    var id = 0
-    var databaseManager = DatabaseManager.shared
-    var countiesArray: [County] = []
-
+    var districtId = ""
+    var countiesArray: [CountyFirebase] = []
+    let auth = AuthManager.shared
+    var districtName = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        countiesArray = databaseManager.readCounties(id: id)
-        print(id)
+        configureRefreshControl()
+        
+        if auth.isAuthorized {
+            addbuttonItem.isEnabled = true
+        } else {
+            addbuttonItem.isEnabled = false
+        }
+        
+        loadCounties()
+        print(districtId)
     }
 }

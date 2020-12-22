@@ -21,7 +21,7 @@ class HouseUICollectionVIewLayout: UICollectionViewLayout {
         guard itemsCount > 0 else { return }
         
         let bigCellWidth = collectionView.frame.width
-        
+    
         var lastY: CGFloat = 0
         
         for index in 0 ..< itemsCount {

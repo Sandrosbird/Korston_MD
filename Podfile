@@ -6,9 +6,9 @@
 target 'Korston_MD_App' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  pod 'Firebase/Database'
-  pod 'Firebase/Storage'
-  pod 'Firebase/Auth' 
+  pod 'Firebase/Firestore', '~> 7.3.0'
+  pod 'Firebase/Storage', '~> 7.3.0'
+  pod 'Firebase/Auth', '~> 7.3.0'
 
   # Pods for Korston_MD_App
 

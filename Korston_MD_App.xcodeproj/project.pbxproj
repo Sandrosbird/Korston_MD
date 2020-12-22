@@ -3,18 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4CE58C58A392B8A1B5FD779F /* Pods_Korston_MD_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D944608307284CCC1D11BA08 /* Pods_Korston_MD_App.framework */; };
 		4D630FEE0E6093A61FDF1F3E /* Pods_Korston_MD_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B72E82CBFA5B500A8AD46C /* Pods_Korston_MD_AppTests.framework */; };
-		7649ADDF257C2A18003D5BBF /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7649ADDE257C2A18003D5BBF /* DatabaseManager.swift */; };
 		764CFBEA257D57F60050ECA9 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 764CFBE9257D57EB0050ECA9 /* libsqlite3.tbd */; };
-		764D9AFF257107150061F315 /* Improvement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764D9AFE257107150061F315 /* Improvement.swift */; };
+		7676F006258B450100CD0506 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7676F005258B450100CD0506 /* AuthManager.swift */; };
+		76A81558258A06AD003FC536 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A81557258A06AD003FC536 /* SignUpViewController.swift */; };
+		76A8155C258A100C003FC536 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A8155B258A100C003FC536 /* LoginViewController.swift */; };
+		76A81561258A14A8003FC536 /* StyleButtonsFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A81560258A14A8003FC536 /* StyleButtonsFields.swift */; };
+		76B8D861258FC423003B4EBE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76B8D860258FC423003B4EBE /* GoogleService-Info.plist */; };
+		76B8D87B25909955003B4EBE /* UITableVIewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B8D87A25909955003B4EBE /* UITableVIewExtensions.swift */; };
+		76B8D8812592013E003B4EBE /* NewDistrictVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B8D8802592013E003B4EBE /* NewDistrictVIewController.swift */; };
+		76B8D8A0259219E1003B4EBE /* NewCountyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B8D89F259219E1003B4EBE /* NewCountyViewController.swift */; };
 		76C5833E257FB00E004B33CA /* DetailPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C5833D257FB00E004B33CA /* DetailPhotoViewController.swift */; };
-		76C5834A257FB80A004B33CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76C58349257FB80A004B33CA /* GoogleService-Info.plist */; };
-		76C76BF9257E1464006BA3BC /* municipality.db in Resources */ = {isa = PBXBuildFile; fileRef = 76C76BF8257E1464006BA3BC /* municipality.db */; };
+		76C583692582011D004B33CA /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C583682582011D004B33CA /* StorageManager.swift */; };
+		76C5838025820233004B33CA /* Pods_Korston_MD_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D944608307284CCC1D11BA08 /* Pods_Korston_MD_App.framework */; };
+		76C5838125820233004B33CA /* Pods_Korston_MD_App.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D944608307284CCC1D11BA08 /* Pods_Korston_MD_App.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		76C58388258266A5004B33CA /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C58387258266A5004B33CA /* FirestoreManager.swift */; };
+		76C583A225835486004B33CA /* DistrictFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C583A125835485004B33CA /* DistrictFirebase.swift */; };
+		76C583A825839B75004B33CA /* CountyFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C583A725839B74004B33CA /* CountyFirebase.swift */; };
+		76C583AE2583B353004B33CA /* StreetFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C583AD2583B353004B33CA /* StreetFirebase.swift */; };
+		76C583B22583BCD4004B33CA /* HouseFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C583B12583BCD4004B33CA /* HouseFirebase.swift */; };
+		76C583B62583FE40004B33CA /* SupporterFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C583B52583FE40004B33CA /* SupporterFirebase.swift */; };
+		76C583BA2584023D004B33CA /* ImprovementFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C583B92584023D004B33CA /* ImprovementFirebase.swift */; };
 		76C76BFF257E74F9006BA3BC /* CountyStreetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C76BFE257E74F9006BA3BC /* CountyStreetsTableViewController.swift */; };
 		76C76C0C257E766B006BA3BC /* CountyStreetsTableViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C76C0B257E766B006BA3BC /* CountyStreetsTableViewController+DataSource.swift */; };
 		76C76C12257E7694006BA3BC /* CountyStreetsTableViewController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C76C11257E7694006BA3BC /* CountyStreetsTableViewController+Helpers.swift */; };
@@ -26,11 +39,6 @@
 		76D323E22563B400007C4B82 /* Korston_MD_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D323E12563B400007C4B82 /* Korston_MD_AppTests.swift */; };
 		76D323ED2563B400007C4B82 /* Korston_MD_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D323EC2563B400007C4B82 /* Korston_MD_AppUITests.swift */; };
 		76D324052563B58D007C4B82 /* CityDistrictTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D324042563B58D007C4B82 /* CityDistrictTableViewController.swift */; };
-		76D3240E2563B600007C4B82 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D3240D2563B600007C4B82 /* City.swift */; };
-		76D324192563B763007C4B82 /* District.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D324182563B763007C4B82 /* District.swift */; };
-		76D3241E2563B835007C4B82 /* County.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D3241D2563B835007C4B82 /* County.swift */; };
-		76D324232563B874007C4B82 /* Street.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D324222563B874007C4B82 /* Street.swift */; };
-		76D324282563BAE9007C4B82 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D324272563BAE9007C4B82 /* House.swift */; };
 		76D3244125652871007C4B82 /* DistrictCountiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D3244025652871007C4B82 /* DistrictCountiesTableViewController.swift */; };
 		76D3244A25652F7A007C4B82 /* CityDistrictTableVIewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D3244925652F7A007C4B82 /* CityDistrictTableVIewController+DataSource.swift */; };
 		76D3245225652FED007C4B82 /* CityDistrictTableViewController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D3245125652FED007C4B82 /* CityDistrictTableViewController+Helpers.swift */; };
@@ -48,12 +56,9 @@
 		76EDFE4C257A3C6E002316FA /* (OLD)StreetUICollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EDFE4B257A3C6E002316FA /* (OLD)StreetUICollectionViewLayout.swift */; };
 		76FD7910256E5F7600948422 /* HousePhotosCollectionVIewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD790F256E5F7600948422 /* HousePhotosCollectionVIewLayout.swift */; };
 		76FD7915256E618800948422 /* HousePhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD7914256E618800948422 /* HousePhotosCollectionViewController.swift */; };
-		76FD791B256F97EA00948422 /* (OLD)CountyStreetsCollectionViewController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD791A256F97EA00948422 /* (OLD)CountyStreetsCollectionViewController+Helpers.swift */; };
-		76FD7920256F984500948422 /* (OLD)CountyStreetsCollectionViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD791F256F984500948422 /* (OLD)CountyStreetsCollectionViewController+DataSource.swift */; };
 		76FD7929256F995C00948422 /* StreetsHousesCollectionViewController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD7928256F995C00948422 /* StreetsHousesCollectionViewController+Helpers.swift */; };
 		76FD7931256F996B00948422 /* StreetsHousesCollectionViewController+Delegate+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD7930256F996B00948422 /* StreetsHousesCollectionViewController+Delegate+DataSource.swift */; };
 		76FD793C256F9DA200948422 /* HousePhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD793B256F9DA200948422 /* HousePhotosCollectionViewCell.swift */; };
-		76FD7944256FB08D00948422 /* Supporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD7943256FB08D00948422 /* Supporter.swift */; };
 		76FD7949256FB2DF00948422 /* SupportersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD7948256FB2DF00948422 /* SupportersTableViewController.swift */; };
 		76FD794E256FB4DE00948422 /* SupporterTableVIewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD794D256FB4DE00948422 /* SupporterTableVIewCell.swift */; };
 		FF739D79EF9D784648E559C7 /* Pods_Korston_MD_App_Korston_MD_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE81D64A8E22995643B8C4A /* Pods_Korston_MD_App_Korston_MD_AppUITests.framework */; };
@@ -77,12 +82,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		76EDFE61257A4056002316FA /* Embed Frameworks */ = {
+		76C5838225820233004B33CA /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				76C5838125820233004B33CA /* Pods_Korston_MD_App.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,12 +101,29 @@
 		4D0979980880E73590E4ED4F /* Pods-Korston_MD_AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Korston_MD_AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Korston_MD_AppTests/Pods-Korston_MD_AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		667443A73C460BF07C42E3B5 /* Pods-Korston_MD_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Korston_MD_App.release.xcconfig"; path = "Target Support Files/Pods-Korston_MD_App/Pods-Korston_MD_App.release.xcconfig"; sourceTree = "<group>"; };
 		73B72E82CBFA5B500A8AD46C /* Pods_Korston_MD_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Korston_MD_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7649ADDE257C2A18003D5BBF /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		764CFBE9257D57EB0050ECA9 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		764D9AFE257107150061F315 /* Improvement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Improvement.swift; sourceTree = "<group>"; };
+		7676F005258B450100CD0506 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		76A81557258A06AD003FC536 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		76A8155B258A100C003FC536 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		76A81560258A14A8003FC536 /* StyleButtonsFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleButtonsFields.swift; sourceTree = "<group>"; };
+		76B8D860258FC423003B4EBE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		76B8D87A25909955003B4EBE /* UITableVIewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableVIewExtensions.swift; sourceTree = "<group>"; };
+		76B8D8802592013E003B4EBE /* NewDistrictVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDistrictVIewController.swift; sourceTree = "<group>"; };
+		76B8D89F259219E1003B4EBE /* NewCountyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCountyViewController.swift; sourceTree = "<group>"; };
 		76C5833D257FB00E004B33CA /* DetailPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoViewController.swift; sourceTree = "<group>"; };
-		76C58349257FB80A004B33CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		76C76BF8257E1464006BA3BC /* municipality.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = municipality.db; sourceTree = SOURCE_ROOT; };
+		76C583682582011D004B33CA /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		76C5836C258201D0004B33CA /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76C5836D258201D0004B33CA /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76C5836E258201D0004B33CA /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCoreDiagnostics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76C5836F258201D0004B33CA /* FirebaseDatabase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseDatabase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76C58370258201D0004B33CA /* FirebaseStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76C58387258266A5004B33CA /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
+		76C583A125835485004B33CA /* DistrictFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictFirebase.swift; sourceTree = "<group>"; };
+		76C583A725839B74004B33CA /* CountyFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountyFirebase.swift; sourceTree = "<group>"; };
+		76C583AD2583B353004B33CA /* StreetFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetFirebase.swift; sourceTree = "<group>"; };
+		76C583B12583BCD4004B33CA /* HouseFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseFirebase.swift; sourceTree = "<group>"; };
+		76C583B52583FE40004B33CA /* SupporterFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupporterFirebase.swift; sourceTree = "<group>"; };
+		76C583B92584023D004B33CA /* ImprovementFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImprovementFirebase.swift; sourceTree = "<group>"; };
 		76C76BFE257E74F9006BA3BC /* CountyStreetsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountyStreetsTableViewController.swift; sourceTree = "<group>"; };
 		76C76C0B257E766B006BA3BC /* CountyStreetsTableViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CountyStreetsTableViewController+DataSource.swift"; sourceTree = "<group>"; };
 		76C76C11257E7694006BA3BC /* CountyStreetsTableViewController+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CountyStreetsTableViewController+Helpers.swift"; sourceTree = "<group>"; };
@@ -118,11 +141,6 @@
 		76D323EC2563B400007C4B82 /* Korston_MD_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Korston_MD_AppUITests.swift; sourceTree = "<group>"; };
 		76D323EE2563B400007C4B82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76D324042563B58D007C4B82 /* CityDistrictTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDistrictTableViewController.swift; sourceTree = "<group>"; };
-		76D3240D2563B600007C4B82 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
-		76D324182563B763007C4B82 /* District.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = District.swift; sourceTree = "<group>"; };
-		76D3241D2563B835007C4B82 /* County.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = County.swift; sourceTree = "<group>"; };
-		76D324222563B874007C4B82 /* Street.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Street.swift; sourceTree = "<group>"; };
-		76D324272563BAE9007C4B82 /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
 		76D3244025652871007C4B82 /* DistrictCountiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictCountiesTableViewController.swift; sourceTree = "<group>"; };
 		76D3244925652F7A007C4B82 /* CityDistrictTableVIewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CityDistrictTableVIewController+DataSource.swift"; sourceTree = "<group>"; };
 		76D3245125652FED007C4B82 /* CityDistrictTableViewController+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CityDistrictTableViewController+Helpers.swift"; sourceTree = "<group>"; };
@@ -140,12 +158,9 @@
 		76EDFE4B257A3C6E002316FA /* (OLD)StreetUICollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "(OLD)StreetUICollectionViewLayout.swift"; sourceTree = "<group>"; };
 		76FD790F256E5F7600948422 /* HousePhotosCollectionVIewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousePhotosCollectionVIewLayout.swift; sourceTree = "<group>"; };
 		76FD7914256E618800948422 /* HousePhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousePhotosCollectionViewController.swift; sourceTree = "<group>"; };
-		76FD791A256F97EA00948422 /* (OLD)CountyStreetsCollectionViewController+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "(OLD)CountyStreetsCollectionViewController+Helpers.swift"; sourceTree = "<group>"; };
-		76FD791F256F984500948422 /* (OLD)CountyStreetsCollectionViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "(OLD)CountyStreetsCollectionViewController+DataSource.swift"; sourceTree = "<group>"; };
 		76FD7928256F995C00948422 /* StreetsHousesCollectionViewController+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StreetsHousesCollectionViewController+Helpers.swift"; sourceTree = "<group>"; };
 		76FD7930256F996B00948422 /* StreetsHousesCollectionViewController+Delegate+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StreetsHousesCollectionViewController+Delegate+DataSource.swift"; sourceTree = "<group>"; };
 		76FD793B256F9DA200948422 /* HousePhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousePhotosCollectionViewCell.swift; sourceTree = "<group>"; };
-		76FD7943256FB08D00948422 /* Supporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supporter.swift; sourceTree = "<group>"; };
 		76FD7948256FB2DF00948422 /* SupportersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportersTableViewController.swift; sourceTree = "<group>"; };
 		76FD794D256FB4DE00948422 /* SupporterTableVIewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupporterTableVIewCell.swift; sourceTree = "<group>"; };
 		D944608307284CCC1D11BA08 /* Pods_Korston_MD_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Korston_MD_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,8 +174,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76C5838025820233004B33CA /* Pods_Korston_MD_App.framework in Frameworks */,
 				764CFBEA257D57F60050ECA9 /* libsqlite3.tbd in Frameworks */,
-				4CE58C58A392B8A1B5FD779F /* Pods_Korston_MD_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,12 +214,36 @@
 		4325091C7B10AC997D3C80C5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				76C5836C258201D0004B33CA /* FirebaseAuth.framework */,
+				76C5836D258201D0004B33CA /* FirebaseCore.framework */,
+				76C5836E258201D0004B33CA /* FirebaseCoreDiagnostics.framework */,
+				76C5836F258201D0004B33CA /* FirebaseDatabase.framework */,
+				76C58370258201D0004B33CA /* FirebaseStorage.framework */,
 				764CFBE9257D57EB0050ECA9 /* libsqlite3.tbd */,
 				D944608307284CCC1D11BA08 /* Pods_Korston_MD_App.framework */,
 				DBE81D64A8E22995643B8C4A /* Pods_Korston_MD_App_Korston_MD_AppUITests.framework */,
 				73B72E82CBFA5B500A8AD46C /* Pods_Korston_MD_AppTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		76A8155F258A1497003FC536 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				76A81560258A14A8003FC536 /* StyleButtonsFields.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		76B8D8842592014F003B4EBE /* CustomViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				76A81557258A06AD003FC536 /* SignUpViewController.swift */,
+				76A8155B258A100C003FC536 /* LoginViewController.swift */,
+				76B8D8802592013E003B4EBE /* NewDistrictVIewController.swift */,
+				76B8D89F259219E1003B4EBE /* NewCountyViewController.swift */,
+			);
+			path = CustomViewControllers;
 			sourceTree = "<group>";
 		};
 		76C58341257FB028004B33CA /* DetailPhoto */ = {
@@ -256,11 +295,11 @@
 				76D324002563B45A007C4B82 /* VIewControllers */,
 				76EDFE56257A3FEC002316FA /* Managers */,
 				76D3244825652F58007C4B82 /* Extensions */,
+				76A8155F258A1497003FC536 /* Helpers */,
 				76D323D32563B3FF007C4B82 /* Assets.xcassets */,
-				76C76BF8257E1464006BA3BC /* municipality.db */,
 				76D323D52563B3FF007C4B82 /* LaunchScreen.storyboard */,
 				76D323D82563B3FF007C4B82 /* Info.plist */,
-				76C58349257FB80A004B33CA /* GoogleService-Info.plist */,
+				76B8D860258FC423003B4EBE /* GoogleService-Info.plist */,
 			);
 			path = Korston_MD_App;
 			sourceTree = "<group>";
@@ -286,6 +325,7 @@
 		76D324002563B45A007C4B82 /* VIewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				76B8D8842592014F003B4EBE /* CustomViewControllers */,
 				76C58341257FB028004B33CA /* DetailPhoto */,
 				76E8CCB62569187100F7C91D /* TableVIew */,
 				76E8CCB72569187D00F7C91D /* CollectionView */,
@@ -296,13 +336,12 @@
 		76D3240C2563B5E5007C4B82 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				76D3240D2563B600007C4B82 /* City.swift */,
-				76D324182563B763007C4B82 /* District.swift */,
-				76D3241D2563B835007C4B82 /* County.swift */,
-				76D324222563B874007C4B82 /* Street.swift */,
-				76D324272563BAE9007C4B82 /* House.swift */,
-				76FD7943256FB08D00948422 /* Supporter.swift */,
-				764D9AFE257107150061F315 /* Improvement.swift */,
+				76C583A125835485004B33CA /* DistrictFirebase.swift */,
+				76C583A725839B74004B33CA /* CountyFirebase.swift */,
+				76C583AD2583B353004B33CA /* StreetFirebase.swift */,
+				76C583B12583BCD4004B33CA /* HouseFirebase.swift */,
+				76C583B52583FE40004B33CA /* SupporterFirebase.swift */,
+				76C583B92584023D004B33CA /* ImprovementFirebase.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -313,8 +352,8 @@
 				76D3245625653019007C4B82 /* CityDistrictTableVIewControllerExtensions */,
 				76D324732566699A007C4B82 /* DistrictCountiesTableViewControllerExtensions */,
 				76C76C0A257E7645006BA3BC /* CountyStreetsTableVIewControllerExtensions */,
-				76FD7919256F97AF00948422 /* (OLD)CountyStreetsCollectionViewControllerExtensions */,
 				76FD7927256F991A00948422 /* StreetsHousesCollectionVIewControllerExtensions */,
+				76B8D87A25909955003B4EBE /* UITableVIewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -386,18 +425,11 @@
 		76EDFE56257A3FEC002316FA /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				7649ADDE257C2A18003D5BBF /* DatabaseManager.swift */,
+				76C583682582011D004B33CA /* StorageManager.swift */,
+				76C58387258266A5004B33CA /* FirestoreManager.swift */,
+				7676F005258B450100CD0506 /* AuthManager.swift */,
 			);
 			path = Managers;
-			sourceTree = "<group>";
-		};
-		76FD7919256F97AF00948422 /* (OLD)CountyStreetsCollectionViewControllerExtensions */ = {
-			isa = PBXGroup;
-			children = (
-				76FD791F256F984500948422 /* (OLD)CountyStreetsCollectionViewController+DataSource.swift */,
-				76FD791A256F97EA00948422 /* (OLD)CountyStreetsCollectionViewController+Helpers.swift */,
-			);
-			path = "(OLD)CountyStreetsCollectionViewControllerExtensions";
 			sourceTree = "<group>";
 		};
 		76FD7927256F991A00948422 /* StreetsHousesCollectionVIewControllerExtensions */ = {
@@ -430,8 +462,8 @@
 				76D323C32563B3FA007C4B82 /* Sources */,
 				76D323C42563B3FA007C4B82 /* Frameworks */,
 				76D323C52563B3FA007C4B82 /* Resources */,
-				76EDFE61257A4056002316FA /* Embed Frameworks */,
 				7BD537CA312560B08D230A3C /* [CP] Embed Pods Frameworks */,
+				76C5838225820233004B33CA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -529,10 +561,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				76D323D72563B3FF007C4B82 /* LaunchScreen.storyboard in Resources */,
+				76B8D861258FC423003B4EBE /* GoogleService-Info.plist in Resources */,
 				76D323D42563B3FF007C4B82 /* Assets.xcassets in Resources */,
-				76C5834A257FB80A004B33CA /* GoogleService-Info.plist in Resources */,
 				76D323D22563B3FA007C4B82 /* Main.storyboard in Resources */,
-				76C76BF9257E1464006BA3BC /* municipality.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,43 +692,48 @@
 			buildActionMask = 2147483647;
 			files = (
 				76FD7949256FB2DF00948422 /* SupportersTableViewController.swift in Sources */,
+				76B8D87B25909955003B4EBE /* UITableVIewExtensions.swift in Sources */,
 				76EDFE46257A3A29002316FA /* PlannedImprovementTableVIewCell.swift in Sources */,
+				76B8D8A0259219E1003B4EBE /* NewCountyViewController.swift in Sources */,
 				76D323CB2563B3FA007C4B82 /* AppDelegate.swift in Sources */,
 				76EDFE47257A3A29002316FA /* PerformedImprovementTableViewCell.swift in Sources */,
 				76C76C12257E7694006BA3BC /* CountyStreetsTableViewController+Helpers.swift in Sources */,
 				76D3246A2565384A007C4B82 /* (OLD)StreetCollectionViewCell.swift in Sources */,
 				76D3244125652871007C4B82 /* DistrictCountiesTableViewController.swift in Sources */,
-				76D324192563B763007C4B82 /* District.swift in Sources */,
-				76D324282563BAE9007C4B82 /* House.swift in Sources */,
+				7676F006258B450100CD0506 /* AuthManager.swift in Sources */,
 				76C5833E257FB00E004B33CA /* DetailPhotoViewController.swift in Sources */,
 				76C76BFF257E74F9006BA3BC /* CountyStreetsTableViewController.swift in Sources */,
 				76D324052563B58D007C4B82 /* CityDistrictTableViewController.swift in Sources */,
+				76C583692582011D004B33CA /* StorageManager.swift in Sources */,
 				76D3247D256669E1007C4B82 /* DistrictCountiesTableViewController+Helpers.swift in Sources */,
-				76D3241E2563B835007C4B82 /* County.swift in Sources */,
-				76FD791B256F97EA00948422 /* (OLD)CountyStreetsCollectionViewController+Helpers.swift in Sources */,
+				76A8155C258A100C003FC536 /* LoginViewController.swift in Sources */,
+				76C583B62583FE40004B33CA /* SupporterFirebase.swift in Sources */,
+				76B8D8812592013E003B4EBE /* NewDistrictVIewController.swift in Sources */,
 				76EDFE4C257A3C6E002316FA /* (OLD)StreetUICollectionViewLayout.swift in Sources */,
-				76D3240E2563B600007C4B82 /* City.swift in Sources */,
 				76FD793C256F9DA200948422 /* HousePhotosCollectionViewCell.swift in Sources */,
+				76C583AE2583B353004B33CA /* StreetFirebase.swift in Sources */,
 				76FD7931256F996B00948422 /* StreetsHousesCollectionViewController+Delegate+DataSource.swift in Sources */,
-				76FD7920256F984500948422 /* (OLD)CountyStreetsCollectionViewController+DataSource.swift in Sources */,
+				76C583A225835486004B33CA /* DistrictFirebase.swift in Sources */,
+				76C583BA2584023D004B33CA /* ImprovementFirebase.swift in Sources */,
+				76C583A825839B75004B33CA /* CountyFirebase.swift in Sources */,
 				76EDFE35257A3966002316FA /* PerformedImprovementsTableViewController.swift in Sources */,
 				76E8CCAF2569170D00F7C91D /* HouseUICollectionViewCell.swift in Sources */,
 				76D32475256669D6007C4B82 /* DistrictCountiesTableViewController+DataSource.swift in Sources */,
-				76FD7944256FB08D00948422 /* Supporter.swift in Sources */,
 				76D3245225652FED007C4B82 /* CityDistrictTableViewController+Helpers.swift in Sources */,
 				76C76C0C257E766B006BA3BC /* CountyStreetsTableViewController+DataSource.swift in Sources */,
 				76D3246F256668F9007C4B82 /* (OLD)CountyStreetsCollectionViewController.swift in Sources */,
-				764D9AFF257107150061F315 /* Improvement.swift in Sources */,
 				76E8CCA32569123B00F7C91D /* StreetsHousesCollectionViewController.swift in Sources */,
 				76FD7915256E618800948422 /* HousePhotosCollectionViewController.swift in Sources */,
 				76EDFE3D257A39FC002316FA /* PlannedImprovementsTableViewController.swift in Sources */,
-				7649ADDF257C2A18003D5BBF /* DatabaseManager.swift in Sources */,
 				76D323CD2563B3FA007C4B82 /* SceneDelegate.swift in Sources */,
 				76E8CCA82569150800F7C91D /* HouseUICollectionVIewLayout.swift in Sources */,
 				76FD794E256FB4DE00948422 /* SupporterTableVIewCell.swift in Sources */,
 				76D3244A25652F7A007C4B82 /* CityDistrictTableVIewController+DataSource.swift in Sources */,
+				76A81558258A06AD003FC536 /* SignUpViewController.swift in Sources */,
+				76C58388258266A5004B33CA /* FirestoreManager.swift in Sources */,
 				76FD7929256F995C00948422 /* StreetsHousesCollectionViewController+Helpers.swift in Sources */,
-				76D324232563B874007C4B82 /* Street.swift in Sources */,
+				76C583B22583BCD4004B33CA /* HouseFirebase.swift in Sources */,
+				76A81561258A14A8003FC536 /* StyleButtonsFields.swift in Sources */,
 				76FD7910256E5F7600948422 /* HousePhotosCollectionVIewLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,13 +9,23 @@ import UIKit
 
 class CountyStreetsTableViewController: UITableViewController {
 
+    @IBOutlet weak var addbuttonItem: UIBarButtonItem!
     //MARK: - Properties
-    var id = 0
-    var databaseManager = DatabaseManager.shared
-    var streetsArray: [Street] = []
+    var districtId = ""
+    var countyId = ""
+    var districtName = ""
+    var countyName = ""
+    var streetsArray: [StreetFirebase] = []
+    let auth = AuthManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        streetsArray = databaseManager.readStreets(id: id)
+        configureRefreshControl()
+        if auth.isAuthorized {
+            addbuttonItem.isEnabled = true
+        } else {
+            addbuttonItem.isEnabled = false
+        }
+        loadStreets()
     }
 }

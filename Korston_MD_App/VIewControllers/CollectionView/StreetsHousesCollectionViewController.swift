@@ -9,16 +9,24 @@ import UIKit
 
 
 class StreetsHousesCollectionViewController: UICollectionViewController {
+    @IBOutlet weak var addbuttonItem: UIBarButtonItem!
     //MARK: - Properties
     let reuseIdentifier = "HouseUICollectionViewCell"
-    let databaseManager = DatabaseManager.shared
-    var id = 0
-    var housesArray: [House] = []
-    var photosArray: [UIImage] = []
+    let storage = StorageManager.shared
+    var streetId = ""
+    var districtId = ""
+    var countyId = ""
+    var housesArray: [HouseFirebase] = []
+    let auth = AuthManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        housesArray = databaseManager.readHouses(id: id)
+        if auth.isAuthorized {
+            addbuttonItem.isEnabled = true
+        } else {
+            addbuttonItem.isEnabled = false
+        }
+        loadHouses()
     }
 
     /*

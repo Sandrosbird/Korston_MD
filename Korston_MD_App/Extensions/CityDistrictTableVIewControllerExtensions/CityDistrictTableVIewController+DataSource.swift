@@ -15,6 +15,12 @@ extension CityDistrictTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if districtsArray.count == 0 {
+            self.tableView.setEmptyMessage("Нет данных")
+        } else {
+            self.tableView.restore()
+        }
+        
         return districtsArray.count
     }
     

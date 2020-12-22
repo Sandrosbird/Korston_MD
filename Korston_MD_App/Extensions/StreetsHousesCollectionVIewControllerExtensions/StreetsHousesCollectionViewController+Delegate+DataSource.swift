@@ -10,31 +10,33 @@ import UIKit
 extension StreetsHousesCollectionViewController {
     
     // MARK: UICollectionViewDataSource
-
+    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
-
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         return housesArray.count
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let houseId = housesArray[indexPath.row].id
-        photosArray = databaseManager.readHousePhotos(id: houseId)
+        let house = housesArray[indexPath.row]
+        //        let houseId = house.id
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? HouseUICollectionViewCell else { return UICollectionViewCell() }
-        let number = housesArray[indexPath.row].houseNumber
-        
-        photosArray = databaseManager.readHousePhotos(id: houseId)
-        
-        cell.houseName?.text = "Дом № \(number)"
-        if !photosArray.isEmpty {
-            cell.houseImage?.image = photosArray[0]
-        } else {
-            cell.houseImage?.image = UIImage(named: "nodata")
+        let name = house.name
+        cell.houseName?.text = "Дом №\(name)"
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.storage.downloadPhotosPaths(path: house.imagePath) { (paths) in
+                if paths.first == nil {
+                    cell.houseImage?.image = UIImage(named: "nodata")
+                } else {
+                    self.storage.downloadSinglePhoto(imagePath: paths.first!) { (image) in
+                        cell.houseImage?.image = image
+                    }
+                }
+            }
         }
         
         return cell
@@ -43,21 +45,30 @@ extension StreetsHousesCollectionViewController {
     //MARK: - Delegate
     override func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
         let configuration = UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { (actions) -> UIMenu? in
+            
             let photo = UIAction(title: "Фотографии", image: UIImage(systemName: "photo.fill"), attributes: [], state: .off) { (action) in
                 guard let destination = self.storyboard?.instantiateViewController(identifier: "HousePhotosCollectionViewController") as? HousePhotosCollectionViewController else { return }
-                let houseId = self.housesArray[indexPath.row].id
-                destination.id = houseId
+                let house = self.housesArray[indexPath.row]
+                let houseId = house.id
+//                let imageFolder = self.housesArray[indexPath.row].imageFolder
+                
+                
+                destination.districtId = self.districtId
+                destination.countyId = self.countyId
+                destination.streetId = self.streetId
+                destination.houseId = houseId
+                destination.imageFolderPath = house.imagePath
                 self.show(destination, sender: nil)
             }
             
             let supporters = UIAction(title: "Актив и сторонники", image: UIImage(systemName: "person.2"), attributes: [], state: .off) { (action) in
                 guard let destination = self.storyboard?.instantiateViewController(identifier: "SupportersTableViewController") as? SupportersTableViewController else { return }
-                var supportersArray: [Supporter] = []
                 let houseId = self.housesArray[indexPath.row].id
                 DispatchQueue.global().async {
-                    supportersArray = self.databaseManager.readSupporters(id: houseId)
-                    destination.id = houseId
-                    destination.supportersArray = supportersArray
+                    destination.districtId = self.districtId
+                    destination.countyId = self.countyId
+                    destination.streetId = self.streetId
+                    destination.houseId = houseId
                     DispatchQueue.main.async {
                         self.show(destination, sender: nil)
                     }
@@ -68,30 +79,30 @@ extension StreetsHousesCollectionViewController {
                 guard let destination = self.storyboard?.instantiateViewController(identifier: "PerformedImprovementsTableViewController") as? PerformedImprovementsTableViewController else { return }
                 
                 let houseId = self.housesArray[indexPath.row].id
-                var improvementsArray: [Improvement] = []
                 DispatchQueue.global().async {
-                    improvementsArray = self.databaseManager.readImprovements(id: houseId, type: .jobsDone)
-                    destination.id = houseId
-                    destination.improvementsArray = improvementsArray
+                    destination.districtId = self.districtId
+                    destination.countyId = self.countyId
+                    destination.streetId = self.streetId
+                    destination.houseId = houseId
                     DispatchQueue.main.async {
                         self.show(destination, sender: nil)
-
+                        
                     }
                 }
             }
             
             let plannedImprovements = UIAction(title: "Запланированные работы по благоустройству", image: UIImage(systemName: "doc.fill"), attributes: [], state: .off) { (action) in
-                guard let destination = self.storyboard?.instantiateViewController(identifier: "PerformedImprovementsTableViewController") as? PerformedImprovementsTableViewController else { return }
+                guard let destination = self.storyboard?.instantiateViewController(identifier: "PlannedImprovementsTableViewController") as? PlannedImprovementsTableViewController else { return }
                 
                 let houseId = self.housesArray[indexPath.row].id
-                var improvementsArray: [Improvement] = []
                 DispatchQueue.global().async {
-                    improvementsArray = self.databaseManager.readImprovements(id: houseId, type: .plannedJobs)
-                    destination.id = houseId
-                    destination.improvementsArray = improvementsArray
+                    destination.districtId = self.districtId
+                    destination.countyId = self.countyId
+                    destination.streetId = self.streetId
+                    destination.houseId = houseId
                     DispatchQueue.main.async {
                         self.show(destination, sender: nil)
-
+                        
                     }
                 }
             }

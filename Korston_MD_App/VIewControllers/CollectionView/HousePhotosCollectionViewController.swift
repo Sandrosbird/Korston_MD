@@ -11,19 +11,25 @@ class HousePhotosCollectionViewController: UICollectionViewController {
     
     //MARK: - Properties
     let reuseIdentifier = "HousePhotoCollectionViewCell"
-    let databaseManager = DatabaseManager.shared
-    var id = 0
+    let storage = StorageManager.shared
+    var districtId = ""
+    var countyId = ""
+    var streetId = ""
+    var houseId = ""
+    var photoPaths: [String] = []
+    var imageFolderPath = ""
     
-    var photosArray: [UIImage] = []
+    var photosArray: [UIImage] = [] {
+        didSet {
+            self.collectionView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.global().async {
-            self.photosArray = self.databaseManager.readHousePhotos(id: self.id)
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
-        }
+        print(photoPaths)
+        
+        downloadPhotos()
         
     }
 
@@ -42,9 +48,8 @@ class HousePhotosCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? HousePhotosCollectionViewCell else { return UICollectionViewCell() }
+        
         cell.housePhoto?.image = photosArray[indexPath.row]
-        // Configure the cell
-    
         return cell
     }
 
@@ -55,4 +60,18 @@ class HousePhotosCollectionViewController: UICollectionViewController {
         destination.image = self.photosArray[indexPath.row]
         show(destination, sender: nil)
     }
+    
+    //MARK: - Helpers
+    
+    func downloadPhotos() {
+        self.storage.downloadPhotosPaths(path: self.imageFolderPath) { (paths) in
+//            self.photoPaths = paths
+            for path in paths {
+                self.storage.downloadSinglePhoto(imagePath: path) { (image) in
+                    self.photosArray.append(image)
+                }
+            }
+        }
+    }
 }
+

@@ -13,13 +13,12 @@ class CountyStreetsCollectionViewController: UICollectionViewController {
     
     //MARK: - Properties
     private let reuseIdentifier = "StreetCollectionViewCell"
-    let databaseManager = DatabaseManager.shared
-    var streetsArray: [Street] = []
+    var streetsArray: [StreetFirebase] = []
     var id = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        streetsArray = databaseManager.readStreets(id: id)
+//        streetsArray = databaseManager.readStreets(id: id)
     }
 
     // MARK: UICollectionViewDelegate

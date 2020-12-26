@@ -12,8 +12,6 @@ class FirestoreManager {
     static let shared = FirestoreManager()
     private init(){}
     
-    
-    
     //MARK: - READ FROM DATABASE
     let database = Firestore.firestore()
     
@@ -203,6 +201,107 @@ class FirestoreManager {
         }
     }
     
+    func addStreetFor(name: String, forDistrict district: String, forCounty county: String) {
+        database
+            .collection("districts")
+            .document(district)
+            .collection("local_districts")
+            .document(county)
+            .collection("streets")
+            .document()
+            .setData([
+                "name": "\(name)"
+        ]) { error in
+                if let error = error {
+                   print("Ошибка добавления улицы: \(error)")
+                } else {
+                    print("Улица \(name) добавлена")
+                }
+        }
+    }
+    
+    func addHouseFor(name: String, forDistrict district: String, forCounty county: String, forStreet street: String) {
+        database
+            .collection("districts")
+            .document(district)
+            .collection("local_districts")
+            .document(county)
+            .collection("streets")
+            .document(street)
+            .collection("houses")
+            .document()
+            .setData([
+                "name": "\(name)",
+                "imgpath": ""
+        ]) { error in
+                if let error = error {
+                   print("Ошибка добавления дома: \(error)")
+                } else {
+                    print("Дом \(name) добавлена")
+                }
+        }
+    }
+    
+    func addSupporterFor(name: String, apartment: String, email: String, phone: String, forDistrict district: String, forCounty county: String, forStreet street: String, forHouse house: String) {
+        database
+            .collection("districts")
+            .document(district)
+            .collection("local_districts")
+            .document(county)
+            .collection("streets")
+            .document(street)
+            .collection("houses")
+            .document(house)
+            .collection("roomers")
+            .document()
+            .setData([
+                "name": "\(name)",
+                "email": "\(email)",
+                "apartment": "\(apartment)",
+                "phone": "\(phone)"
+        ]) { error in
+                if let error = error {
+                   print("Ошибка добавления в базу: \(error)")
+                } else {
+                    print("Сторонник \(name) добавлен(а)")
+                }
+        }
+    }
+    
+    func addImprovementFor(type: JobsType, jobName: String, contractor: String, date: String, forDistrict district: String, forCounty county: String, forStreet street: String, forHouse house: String) {
+        
+        var jobCollection = ""
+        
+        switch type {
+        case .jobsDone:
+            jobCollection = "jobs_done"
+        case .plannedJobs:
+            jobCollection = "jobs_not_done"
+        }
+        
+        database
+            .collection("districts")
+            .document(district)
+            .collection("local_districts")
+            .document(county)
+            .collection("streets")
+            .document(street)
+            .collection("houses")
+            .document(house)
+            .collection(jobCollection)
+            .document()
+            .setData([
+                "name": "\(jobName)",
+                "contractor": "\(contractor)",
+                "date": "\(date)"
+        ]) { error in
+                if let error = error {
+                   print("Ошибка добавления в базу: \(error)")
+                } else {
+                    print("Работа \(jobName) добавлен(а)")
+                }
+        }
+    }
 }
 
 extension FirestoreManager: NSCopying {

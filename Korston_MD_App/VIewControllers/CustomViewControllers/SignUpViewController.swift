@@ -16,11 +16,13 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         setUpElements()
+        AuthManager.shared.addUserListener(controller: self)
+
         // Do any additional setup after loading the view.
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        AuthManager.shared.signOut(viewController: self)
+//        AuthManager.shared.signOut(viewController: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,6 +46,14 @@ class SignUpViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func signInButtonTapped(_ sender: UIButton) {
+        if AuthManager.shared.isAuthorized {
+            performSegue(withIdentifier: "continueUnAuthorized", sender: nil)
+        } else {
+            performSegue(withIdentifier: "toSignIn", sender: nil)
+        }
+    }
+    
     @IBAction func withoutSignInButtonTapped(_ sender: Any) {
         if AuthManager.shared.isAuthorized == true {
             let alert = UIAlertController(title: "Внимание!", message: "Продолжив без авторизации вы выйдете из своего аккаунта. Вам будут недоступны функции добавления контента", preferredStyle: .alert)

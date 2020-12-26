@@ -1,5 +1,5 @@
 //
-//  HousePhotosCollectionVIewLayout.swift
+//  HousePhotosCollectionViewLayout.swift
 //  Korston_MD_App
 //
 //  Created by Emil Mescheryakov on 25.11.2020.
@@ -7,22 +7,22 @@
 
 import UIKit
 
-class HousePhotosCollectionVIewLayout: UICollectionViewLayout {
-    
+class HousePhotosCollectionViewLayout: UICollectionViewFlowLayout {
     //MARK: - Properties
     var cacheAttributes = [IndexPath: UICollectionViewLayoutAttributes]()
     var columnsCount = 2
-    var cellHeight: CGFloat = 128
+    var cellHeight: CGFloat = 150
     private var totalCellsHeight: CGFloat = 0
     
     override func prepare() {
-//        super.prepare()
+        super.prepare()
         self.cacheAttributes = [:]
         guard let collectionView = self.collectionView else { return }
         let itemsCount = collectionView.numberOfItems(inSection: 0)
         guard itemsCount > 0 else { return }
         
-        let cellWidth = collectionView.frame.width / CGFloat(self.columnsCount)
+        let bigCellWidth = collectionView.frame.width / CGFloat(self.columnsCount)
+        let smallCellWidth = collectionView.frame.width / CGFloat(self.columnsCount)
         
         var lastX: CGFloat = 0
         var lastY: CGFloat = 0
@@ -31,21 +31,24 @@ class HousePhotosCollectionVIewLayout: UICollectionViewLayout {
             let indexPath = IndexPath(item: index, section: 0)
             let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
             
-            attributes.frame = CGRect(x: lastX, y: lastY, width: cellWidth, height: self.cellHeight)
-            let isLastColumn = (index + 2) % (self.columnsCount + 1) == 0 || index == itemsCount - 1
+            attributes.frame = CGRect(x: lastX, y: lastY, width: smallCellWidth, height: self.cellHeight)
+            let isLastColumn = (index + 1) % (self.columnsCount) == 0 || index == itemsCount - 1
             
             if isLastColumn {
                 lastX = 0
                 lastY += self.cellHeight
             } else {
-                lastX += cellWidth
+                lastX += smallCellWidth
             }
+            
             cacheAttributes[indexPath] = attributes
             self.totalCellsHeight = lastY
         }
     }
     
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+//        super.layoutAttributesForElements(in: rect)
+        
         return cacheAttributes.values.filter { (attributes) in
             return rect.intersects(attributes.frame)
         }
@@ -54,7 +57,4 @@ class HousePhotosCollectionVIewLayout: UICollectionViewLayout {
     override var collectionViewContentSize: CGSize {
         return CGSize(width: self.collectionView?.frame.width ?? 0, height: self.totalCellsHeight)
     }
-    
-//    override var collectionViewContentSize: CGSize = CGSize.zero
-    
 }

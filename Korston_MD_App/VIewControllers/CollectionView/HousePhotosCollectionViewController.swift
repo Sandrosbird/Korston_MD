@@ -8,9 +8,13 @@
 import UIKit
 
 class HousePhotosCollectionViewController: UICollectionViewController {
+    //MARK: - Outlets
+    @IBOutlet weak var addButtonItem: UIBarButtonItem!
     
     //MARK: - Properties
+    let refreshControl = UIRefreshControl()
     let reuseIdentifier = "HousePhotoCollectionViewCell"
+    let auth = AuthManager.shared
     let storage = StorageManager.shared
     var districtId = ""
     var countyId = ""
@@ -21,57 +25,29 @@ class HousePhotosCollectionViewController: UICollectionViewController {
     
     var photosArray: [UIImage] = [] {
         didSet {
-            self.collectionView.reloadData()
+            
+            if !(photosArray.count == photoPaths.count) {
+                self.collectionView.reloadData()
+                self.collectionView.collectionViewLayout.invalidateLayout()
+                self.collectionView.layoutSubviews()
+            }
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(photoPaths)
-        
+        self.collectionView.dataSource = self
+        self.collectionView.delegate = self
+        print("ImageFolder: \(imageFolderPath)")
+        if auth.isAuthorized {
+            addButtonItem.isEnabled = true
+        } else {
+            addButtonItem.isEnabled = false
+        }
+        setupBarButtonItem()
+        setupRefreshControl()
         downloadPhotos()
         
-    }
-
-    // MARK: UICollectionViewDataSource
-
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return photosArray.count
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? HousePhotosCollectionViewCell else { return UICollectionViewCell() }
-        
-        cell.housePhoto?.image = photosArray[indexPath.row]
-        return cell
-    }
-
-    // MARK: UICollectionViewDelegate
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let destination = storyboard.instantiateViewController(identifier: "DetailPhotoViewController") as? DetailPhotoViewController else { return }
-        destination.image = self.photosArray[indexPath.row]
-        show(destination, sender: nil)
-    }
-    
-    //MARK: - Helpers
-    
-    func downloadPhotos() {
-        self.storage.downloadPhotosPaths(path: self.imageFolderPath) { (paths) in
-//            self.photoPaths = paths
-            for path in paths {
-                self.storage.downloadSinglePhoto(imagePath: path) { (image) in
-                    self.photosArray.append(image)
-                }
-            }
-        }
     }
 }
 

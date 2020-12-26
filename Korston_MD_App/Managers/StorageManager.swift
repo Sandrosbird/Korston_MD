@@ -17,7 +17,7 @@ class StorageManager {
     
     func downloadSinglePhoto(imagePath: String, completion: @escaping (UIImage) -> Void){
         let imageRef = storageReference.child(imagePath)
-        imageRef.getData(maxSize: 1*1024*1024) { (data, error) in
+        imageRef.getData(maxSize: 1024*1024*5) { (data, error) in
             if let error = error {
                 print(error)
             } else {
@@ -28,8 +28,6 @@ class StorageManager {
     }
     
     func downloadPhotosPaths(path: String, completion: @escaping ([String]) -> Void){
-        let dispatchGroup = DispatchGroup()
-        
         let folderRef = storageReference.child(path)
         print(folderRef.fullPath)
         var imageNamesArray: [String] = []
@@ -49,6 +47,12 @@ class StorageManager {
             }
             completion(imageNamesArray)
         }
+    }
+    
+    func uploadPhotoToStorage(path: String, data: Data) {
+        let currentTime = Date().millisecondsSince1970
+        let folderRef = storageReference.child("\(path)/\(currentTime).jpeg")
+        _ = folderRef.putData(data)
     }
 }
 

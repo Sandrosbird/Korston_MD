@@ -20,23 +20,25 @@ extension StreetsHousesCollectionViewController {
         }
     }
     
-//    func loadPhoto(imagePath: String) -> UIImage {
-//        var image: UIImage
-//        
-//        return image
-//    }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addHouse" {
+            let destination = segue.destination as! NewHouseViewController
+            destination.districtId = districtId
+            destination.countyId = countyId
+            destination.streetId = streetId
+        }
+    }
     
-//    
-//    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let id = housesArray[indexPath.row].id
-//        idTransfer(id: id)
-//    }
-//    
-//    private func idTransfer(id: Int) {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        guard let destination = storyboard.instantiateViewController(identifier: "HousePhotosCollectionViewController") as? HousePhotosCollectionViewController else { return }
-//        destination.id = id
-//        show(destination, sender: nil)
-//    }
+    func setupRefreshControl() {
+        collectionView.refreshControl = refreshControl
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull down to refresh...")
+        refreshControl.addTarget(self, action: #selector(refreshCollection(_:)), for: .valueChanged)
+    }
+    
+    @objc func refreshCollection(_ sender: Any) {
+        housesArray = []
+        loadHouses()
+        self.collectionView.reloadData()
+        refreshControl.endRefreshing()
+    }
 }

@@ -11,5 +11,4 @@ class PlannedImprovementTableVIewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var contractorNameLabel: UILabel!
     @IBOutlet weak var improvementNameLabel: UILabel!
-    
 }

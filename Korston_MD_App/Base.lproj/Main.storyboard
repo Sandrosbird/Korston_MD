@@ -13,7 +13,7 @@
         <!--Выбор района города-->
         <scene sceneID="Clr-Se-Mk8">
             <objects>
-                <tableViewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="qew-e4-DEd" customClass="CityDistrictTableViewController" customModule="Korston_MD_App" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CityDistrictTableViewController" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="qew-e4-DEd" customClass="CityDistrictTableViewController" customModule="Korston_MD_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CityDistrictCell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kjv-Bc-N9H">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,47 +154,55 @@
                             <outlet property="delegate" destination="oqk-fv-q7o" id="z9n-Rd-GMr"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="FFD-YZ-5eg">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="OtC-Rk-pxP"/>
+                    <navigationItem key="navigationItem" title="Выбор дома" id="FFD-YZ-5eg">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="OtC-Rk-pxP">
+                            <connections>
+                                <segue destination="Edf-mh-RrR" kind="show" identifier="addHouse" id="CGz-kD-Dcz"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addbuttonItem" destination="OtC-Rk-pxP" id="EYg-CE-2Rk"/>
+                        <segue destination="pec-zx-Xc8" kind="show" id="qfe-YI-pPc"/>
+                        <segue destination="8eh-12-uhq" kind="show" id="HeU-gt-2PL"/>
+                        <segue destination="zdL-Qi-2cH" kind="show" id="mUL-Xc-c8t"/>
+                        <segue destination="fEi-nc-XhF" kind="show" id="j51-cL-w9O"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y8d-mr-hWD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5380" y="-140.39408866995075"/>
         </scene>
-        <!--Performed Improvements Table View Controller-->
+        <!--Выполненные работы-->
         <scene sceneID="v8k-5j-JH7">
             <objects>
                 <tableViewController storyboardIdentifier="PerformedImprovementsTableViewController" id="8eh-12-uhq" customClass="PerformedImprovementsTableViewController" customModule="Korston_MD_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9pq-wf-RD0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PerformedImprovementTableViewCell" id="eDa-H7-5X3" customClass="PerformedImprovementTableViewCell" customModule="Korston_MD_App" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="45"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eDa-H7-5X3" id="Kro-iE-mQu">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpk-UC-Xze">
-                                            <rect key="frame" x="16" y="5" width="33" height="17.333333333333332"/>
+                                            <rect key="frame" x="16" y="5" width="33" height="16.333333333333332"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfp-CC-CDs">
-                                            <rect key="frame" x="189" y="5" width="33" height="17"/>
+                                            <rect key="frame" x="189" y="5" width="33" height="16"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3J-Wz-u5f">
-                                            <rect key="frame" x="16" y="25.333333333333329" width="33" height="16"/>
+                                            <rect key="frame" x="16" y="24.333333333333329" width="33" height="16"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -225,6 +233,20 @@
                             <outlet property="delegate" destination="8eh-12-uhq" id="KqU-S0-aQO"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Выполненные работы" id="xLc-15-Jw3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dKQ-Wh-dc9">
+                            <connections>
+                                <segue destination="h63-Qw-enD" kind="show" identifier="addPerformedImprovement" id="IKa-hQ-WXV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="WlO-LS-BSa">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
+                    <connections>
+                        <outlet property="addButtonItem" destination="dKQ-Wh-dc9" id="a14-Ub-71K"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bpx-R2-28s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -235,10 +257,10 @@
             <objects>
                 <collectionViewController storyboardIdentifier="HousePhotosCollectionViewController" title="Галерея" modalPresentationStyle="fullScreen" id="fEi-nc-XhF" customClass="HousePhotosCollectionViewController" customModule="Korston_MD_App" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="gzD-Vf-hr9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewLayout key="collectionViewLayout" id="sA8-WB-Ca7" customClass="HousePhotosCollectionVIewLayout" customModule="Korston_MD_App" customModuleProvider="target"/>
+                        <collectionViewLayout key="collectionViewLayout" id="IJs-la-Mxd" customClass="HousePhotosCollectionViewLayout" customModule="Korston_MD_App" customModuleProvider="target"/>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HousePhotoCollectionViewCell" id="GDV-h2-sk4" customClass="HousePhotosCollectionViewCell" customModule="Korston_MD_App" customModuleProvider="target">
                                 <rect key="frame" x="3.6666666666666665" y="0.0" width="368" height="221"/>
@@ -269,7 +291,11 @@
                             <outlet property="delegate" destination="fEi-nc-XhF" id="IcV-Vh-uLI"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" title="Галерея" id="M98-aw-1Q8">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="tEt-o8-ndD"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="addButtonItem" destination="tEt-o8-ndD" id="Kth-Fz-UDm"/>
                         <segue destination="qKa-Xn-saQ" kind="show" id="84x-RV-Bf4"/>
                     </connections>
                 </collectionViewController>
@@ -282,11 +308,11 @@
             <objects>
                 <viewController storyboardIdentifier="DetailPhotoViewController" title="Галерея" modalTransitionStyle="crossDissolve" modalPresentationStyle="formSheet" id="qKa-Xn-saQ" customClass="DetailPhotoViewController" customModule="Korston_MD_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JG5-N2-9Nk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MZb-V9-srS">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PdZ-GD-Ue1"/>
@@ -298,7 +324,7 @@
                             <constraint firstItem="MZb-V9-srS" firstAttribute="leading" secondItem="JG5-N2-9Nk" secondAttribute="leading" id="cjs-gu-RbE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="PLJ-9u-eji"/>
+                    <navigationItem key="navigationItem" title="Галерея" id="PLJ-9u-eji"/>
                     <connections>
                         <outlet property="houseImage" destination="MZb-V9-srS" id="o5g-sK-qek"/>
                     </connections>
@@ -325,7 +351,7 @@
                                         </constraints>
                                         <state key="normal" title="Авторизация"/>
                                         <connections>
-                                            <segue destination="KWY-HN-zzA" kind="show" id="10a-fD-dwX"/>
+                                            <action selector="signInButtonTapped:" destination="g8B-hO-4VZ" eventType="touchUpInside" id="2DX-jO-wYo"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRS-wX-UJJ">
@@ -356,13 +382,14 @@
                         <outlet property="authorisationButton" destination="1sd-kA-wCT" id="Ip2-l5-tGR"/>
                         <outlet property="continueButton" destination="hRS-wX-UJJ" id="l6S-ne-mfn"/>
                         <segue destination="qew-e4-DEd" kind="show" identifier="continueUnAuthorized" id="fc1-sh-n6e"/>
+                        <segue destination="KWY-HN-zzA" kind="show" identifier="toSignIn" id="Yxe-js-32j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eP7-h2-TBv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2095.1999999999998" y="-464.03940886699507"/>
         </scene>
-        <!--New District View Controller-->
+        <!--Добавить район-->
         <scene sceneID="36b-tI-NjQ">
             <objects>
                 <viewController id="LYV-7c-ymS" customClass="NewDistrictViewController" customModule="Korston_MD_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -370,49 +397,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добавить район" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Dy-Iw-dZC">
-                                <rect key="frame" x="20" y="100" width="335" height="21.666666666666671"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название района" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udg-k2-LAX">
-                                <rect key="frame" x="21" y="186.66666666666669" width="140" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96f-DQ-Mvp">
-                                <rect key="frame" x="70" y="324.33333333333331" width="235" height="34"/>
+                                <rect key="frame" x="70" y="283.33333333333331" width="235" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Добавить"/>
                                 <connections>
                                     <action selector="addButtonDidTap:" destination="LYV-7c-ymS" eventType="touchUpInside" id="n17-Bc-BRq"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Название района" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZmF-18-ZRn">
-                                <rect key="frame" x="171" y="180.33333333333331" width="183" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Например: &quot;Промышленный&quot;" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZmF-18-ZRn">
+                                <rect key="frame" x="21" y="144.33333333333334" width="333" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="JuI-Lk-T6Y"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название района" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udg-k2-LAX">
+                                <rect key="frame" x="21" y="119.99999999999999" width="333" height="19.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Iw-YM-jtQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Udg-k2-LAX" firstAttribute="top" secondItem="0Dy-Iw-dZC" secondAttribute="bottom" constant="65" id="5lv-xW-uQo"/>
-                            <constraint firstItem="ZmF-18-ZRn" firstAttribute="leading" secondItem="Udg-k2-LAX" secondAttribute="trailing" constant="10" id="8ks-jU-0Eb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Udg-k2-LAX" secondAttribute="trailing" constant="5" id="9Zx-sJ-NR0"/>
                             <constraint firstItem="96f-DQ-Mvp" firstAttribute="top" secondItem="ZmF-18-ZRn" secondAttribute="bottom" constant="110" id="E8S-5a-wOp"/>
                             <constraint firstItem="Udg-k2-LAX" firstAttribute="leading" secondItem="a0a-G7-3pV" secondAttribute="leadingMargin" constant="5" id="JVL-Am-S6U"/>
-                            <constraint firstItem="0Dy-Iw-dZC" firstAttribute="top" secondItem="0Iw-YM-jtQ" secondAttribute="top" constant="100" id="Tu5-35-xhN"/>
-                            <constraint firstItem="0Dy-Iw-dZC" firstAttribute="leading" secondItem="0Iw-YM-jtQ" secondAttribute="leading" constant="20" id="Ugz-DO-Ec0"/>
-                            <constraint firstItem="0Iw-YM-jtQ" firstAttribute="trailing" secondItem="0Dy-Iw-dZC" secondAttribute="trailing" constant="20" id="VWs-bP-coC"/>
+                            <constraint firstItem="ZmF-18-ZRn" firstAttribute="leading" secondItem="a0a-G7-3pV" secondAttribute="leadingMargin" constant="5" id="PYI-Zh-yic"/>
+                            <constraint firstItem="Udg-k2-LAX" firstAttribute="top" secondItem="0Iw-YM-jtQ" secondAttribute="top" constant="120" id="SP4-bT-7BP"/>
+                            <constraint firstItem="ZmF-18-ZRn" firstAttribute="top" secondItem="Udg-k2-LAX" secondAttribute="bottom" constant="5" id="Wph-BZ-8Oj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZmF-18-ZRn" secondAttribute="trailing" constant="5" id="Xab-2f-qBJ"/>
                             <constraint firstItem="96f-DQ-Mvp" firstAttribute="leading" secondItem="0Iw-YM-jtQ" secondAttribute="leading" constant="70" id="fZ1-Qa-KAZ"/>
                             <constraint firstItem="0Iw-YM-jtQ" firstAttribute="trailing" secondItem="96f-DQ-Mvp" secondAttribute="trailing" constant="70" id="iEM-M9-yHD"/>
-                            <constraint firstItem="ZmF-18-ZRn" firstAttribute="centerY" secondItem="Udg-k2-LAX" secondAttribute="centerY" id="khX-zO-1wG"/>
+                            <constraint firstItem="Udg-k2-LAX" firstAttribute="leading" secondItem="a0a-G7-3pV" secondAttribute="leadingMargin" constant="5" id="w9r-VM-XLa"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="TN7-JX-0HO"/>
+                    <navigationItem key="navigationItem" title="Добавить район" largeTitleDisplayMode="always" id="TN7-JX-0HO"/>
                     <connections>
                         <outlet property="addButton" destination="96f-DQ-Mvp" id="u0i-XX-BXB"/>
                         <outlet property="newDistrictTextField" destination="ZmF-18-ZRn" id="avh-lH-1PY"/>
@@ -422,32 +445,35 @@
             </objects>
             <point key="canvasLocation" x="3085.5999999999999" y="-819.45812807881782"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Авторизация-->
         <scene sceneID="1h9-yX-PS4">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="KWY-HN-zzA" customClass="LoginViewController" customModule="Korston_MD_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" modalPresentationStyle="fullScreen" id="KWY-HN-zzA" customClass="LoginViewController" customModule="Korston_MD_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wF6-JC-ini">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите адрес эл. почты" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OP4-JS-vfA">
-                                <rect key="frame" x="21" y="173.66666666666669" width="333" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите адрес эл. почты" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OP4-JS-vfA">
+                                <rect key="frame" x="22" y="173.66666666666674" width="333" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="pS8-Zx-ky3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x2q-Qg-DPe">
-                                <rect key="frame" x="21" y="252.66666666666669" width="333" height="34"/>
+                                <rect key="frame" x="21" y="247.66666666666669" width="333" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пароль" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wdj-Ax-PrE">
-                                <rect key="frame" x="158" y="227.66666666666669" width="59" height="20"/>
+                                <rect key="frame" x="158" y="222.66666666666669" width="59" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZkY-YM-iDP">
-                                <rect key="frame" x="20" y="340.66666666666669" width="335" height="33"/>
+                                <rect key="frame" x="20" y="330.66666666666669" width="335" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Войти"/>
                                 <connections>
@@ -467,26 +493,21 @@
                             <constraint firstItem="Wdj-Ax-PrE" firstAttribute="top" secondItem="OP4-JS-vfA" secondAttribute="bottom" constant="20" id="0jY-me-Khl"/>
                             <constraint firstItem="Wdj-Ax-PrE" firstAttribute="centerX" secondItem="wF6-JC-ini" secondAttribute="centerX" id="6ba-nG-DRe"/>
                             <constraint firstItem="inN-ki-mTn" firstAttribute="trailing" secondItem="ZkY-YM-iDP" secondAttribute="trailing" constant="20" id="8hH-Me-9YM"/>
-                            <constraint firstItem="OP4-JS-vfA" firstAttribute="leading" secondItem="wF6-JC-ini" secondAttribute="leadingMargin" constant="5" id="Kkw-Se-hGb"/>
-                            <constraint firstItem="OP4-JS-vfA" firstAttribute="centerX" secondItem="wF6-JC-ini" secondAttribute="centerX" id="SWp-0I-CGx"/>
-                            <constraint firstItem="OP4-JS-vfA" firstAttribute="centerX" secondItem="wF6-JC-ini" secondAttribute="centerX" id="U33-jZ-Yfd"/>
-                            <constraint firstItem="LLz-sw-cru" firstAttribute="centerX" secondItem="wF6-JC-ini" secondAttribute="centerX" id="V5L-4S-DLg"/>
+                            <constraint firstItem="x2q-Qg-DPe" firstAttribute="height" secondItem="OP4-JS-vfA" secondAttribute="height" id="EMY-Hk-cPx"/>
                             <constraint firstItem="OP4-JS-vfA" firstAttribute="top" secondItem="LLz-sw-cru" secondAttribute="bottom" constant="5" id="ZIs-zt-5cQ"/>
                             <constraint firstItem="LLz-sw-cru" firstAttribute="top" secondItem="inN-ki-mTn" secondAttribute="top" constant="148" id="ZqW-nq-9e1"/>
                             <constraint firstItem="ZkY-YM-iDP" firstAttribute="leading" secondItem="inN-ki-mTn" secondAttribute="leading" constant="20" id="bbc-DV-IHs"/>
                             <constraint firstItem="LLz-sw-cru" firstAttribute="centerX" secondItem="wF6-JC-ini" secondAttribute="centerX" id="ebs-u1-dWP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="x2q-Qg-DPe" secondAttribute="trailing" constant="5" id="fTn-Y2-cfT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="OP4-JS-vfA" secondAttribute="trailing" constant="5" id="fYy-jg-QPm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OP4-JS-vfA" secondAttribute="trailing" constant="5" id="hda-MC-S5Y"/>
                             <constraint firstItem="x2q-Qg-DPe" firstAttribute="centerX" secondItem="wF6-JC-ini" secondAttribute="centerX" id="hoN-Le-u4W"/>
-                            <constraint firstItem="LLz-sw-cru" firstAttribute="centerX" secondItem="wF6-JC-ini" secondAttribute="centerX" id="jY7-bW-xjQ"/>
-                            <constraint firstItem="Wdj-Ax-PrE" firstAttribute="centerX" secondItem="wF6-JC-ini" secondAttribute="centerX" id="lXN-iC-run"/>
                             <constraint firstItem="ZkY-YM-iDP" firstAttribute="top" secondItem="x2q-Qg-DPe" secondAttribute="bottom" constant="54" id="mE2-AI-ahW"/>
                             <constraint firstItem="x2q-Qg-DPe" firstAttribute="leading" secondItem="wF6-JC-ini" secondAttribute="leadingMargin" constant="5" id="qbM-5g-oVI"/>
                             <constraint firstItem="x2q-Qg-DPe" firstAttribute="top" secondItem="Wdj-Ax-PrE" secondAttribute="bottom" constant="5" id="tRj-52-pIM"/>
-                            <constraint firstItem="x2q-Qg-DPe" firstAttribute="centerX" secondItem="wF6-JC-ini" secondAttribute="centerX" id="urF-C1-sXI"/>
+                            <constraint firstItem="OP4-JS-vfA" firstAttribute="leading" secondItem="wF6-JC-ini" secondAttribute="leadingMargin" constant="5" id="zlf-Gi-yxn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="khU-0J-Jp6"/>
+                    <navigationItem key="navigationItem" title="Авторизация" id="khU-0J-Jp6"/>
                     <connections>
                         <outlet property="loginButton" destination="ZkY-YM-iDP" id="GXS-q6-4re"/>
                         <outlet property="loginTextField" destination="OP4-JS-vfA" id="fGj-wm-5Jd"/>
@@ -498,67 +519,12 @@
             </objects>
             <point key="canvasLocation" x="2095" y="251"/>
         </scene>
-        <!--Выбор улицы-->
-        <scene sceneID="CIZ-gZ-n8e">
-            <objects>
-                <collectionViewController storyboardIdentifier="CountyStreetsCollectionViewController" title="Выбор улицы" modalPresentationStyle="fullScreen" id="SIZ-cX-JIH" customClass="CountyStreetsCollectionViewController" customModule="Korston_MD_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="YgC-sl-r98">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewLayout key="collectionViewLayout" id="y8d-bm-VB9" customClass="StreetUICollectionViewLayout" customModule="Korston_MD_App" customModuleProvider="target"/>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="StreetCollectionViewCell" reuseIdentifier="StreetCollectionViewCell" id="abD-bj-raK" customClass="StreetCollectionViewCell" customModule="Korston_MD_App" customModuleProvider="target">
-                                <rect key="frame" x="60" y="0.0" width="255" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vQb-TN-Bv8">
-                                    <rect key="frame" x="0.0" y="0.0" width="255" height="92"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1O0-wl-wFX">
-                                            <rect key="frame" x="2" y="20" width="251" height="69"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vC-5H-D16">
-                                            <rect key="frame" x="106.33333333333333" y="0.0" width="42.333333333333329" height="21.666666666666668"/>
-                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                            <color key="shadowColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
-                                            <size key="shadowOffset" width="1" height="1"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="3vC-5H-D16" firstAttribute="centerX" secondItem="vQb-TN-Bv8" secondAttribute="centerX" id="5sv-Re-PeA"/>
-                                        <constraint firstItem="3vC-5H-D16" firstAttribute="top" secondItem="vQb-TN-Bv8" secondAttribute="top" id="Gy0-PA-907"/>
-                                        <constraint firstAttribute="bottom" secondItem="1O0-wl-wFX" secondAttribute="bottom" constant="3" id="IM4-d3-JCu"/>
-                                        <constraint firstItem="1O0-wl-wFX" firstAttribute="top" secondItem="vQb-TN-Bv8" secondAttribute="top" constant="20" id="JG9-pw-8CN"/>
-                                        <constraint firstItem="1O0-wl-wFX" firstAttribute="leading" secondItem="vQb-TN-Bv8" secondAttribute="leading" constant="2" id="K76-E2-yIC"/>
-                                        <constraint firstAttribute="trailing" secondItem="1O0-wl-wFX" secondAttribute="trailing" constant="2" id="g9r-q1-crn"/>
-                                    </constraints>
-                                </collectionViewCellContentView>
-                                <size key="customSize" width="255" height="92"/>
-                                <connections>
-                                    <outlet property="streetImage" destination="1O0-wl-wFX" id="CAA-pm-I3M"/>
-                                    <outlet property="streetName" destination="3vC-5H-D16" id="p8Z-Zn-2Pj"/>
-                                </connections>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="SIZ-cX-JIH" id="htN-gE-Ezm"/>
-                            <outlet property="delegate" destination="SIZ-cX-JIH" id="qzZ-LT-DVj"/>
-                        </connections>
-                    </collectionView>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kdj-3Z-SIL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1665" y="-1957"/>
-        </scene>
         <!--Актив и сторонники-->
         <scene sceneID="XGO-6F-lkU">
             <objects>
                 <tableViewController storyboardIdentifier="SupportersTableViewController" title="Актив и сторонники" id="pec-zx-Xc8" customClass="SupportersTableViewController" customModule="Korston_MD_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ud6-wt-Ru7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -621,17 +587,31 @@
                             <outlet property="delegate" destination="pec-zx-Xc8" id="rm1-PS-CQ6"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Список актива и сторонников" id="rDL-ze-T4g">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qkJ-hv-U5k">
+                            <connections>
+                                <segue destination="s8K-Rl-CWP" kind="show" identifier="addSupporter" id="0sH-lB-0al"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="uE3-Lq-rB4">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
+                    <connections>
+                        <outlet property="addButtonItem" destination="qkJ-hv-U5k" id="2sF-h7-bWm"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o00-fn-fRZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6172" y="-140.39408866995075"/>
         </scene>
-        <!--Planned Improvements Table View Controller-->
+        <!--Запланированные работы-->
         <scene sceneID="ehs-TE-01j">
             <objects>
                 <tableViewController storyboardIdentifier="PlannedImprovementsTableViewController" id="zdL-Qi-2cH" customClass="PlannedImprovementsTableViewController" customModule="Korston_MD_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nXv-Ml-xJS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -684,6 +664,20 @@
                             <outlet property="delegate" destination="zdL-Qi-2cH" id="Jl3-lc-JmS"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Запланированные работы" id="ANy-Lq-JS3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="BXK-C8-QFn">
+                            <connections>
+                                <segue destination="Gg9-CZ-lu8" kind="show" identifier="addPlannedImprovement" id="fRF-ed-60i"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="dyr-R2-QKo">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
+                    <connections>
+                        <outlet property="addButtonItem" destination="BXK-C8-QFn" id="Gdp-ky-hS8"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vwe-7p-mMv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -713,7 +707,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Выбор улицы" id="hUX-qm-ofc">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="aeN-zx-KeL"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="aeN-zx-KeL">
+                            <connections>
+                                <segue destination="vfL-o4-aLW" kind="show" identifier="addStreet" id="c1e-XT-4Jz"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="m5d-5J-WOM">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -746,7 +744,7 @@
             </objects>
             <point key="canvasLocation" x="1152.8" y="-464.03940886699507"/>
         </scene>
-        <!--New County View Controller-->
+        <!--Добавить округ-->
         <scene sceneID="BTE-05-Xq4">
             <objects>
                 <viewController id="7tW-u5-vKb" customClass="NewCountyViewController" customModule="Korston_MD_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -754,49 +752,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добавить округ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jH2-7J-NdV">
-                                <rect key="frame" x="20" y="100" width="335" height="21.666666666666671"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название округа" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Y6-H3-dT8">
-                                <rect key="frame" x="21" y="186.66666666666669" width="136" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gx3-nO-jff">
-                                <rect key="frame" x="70" y="324.33333333333331" width="235" height="34"/>
+                                <rect key="frame" x="70" y="283.33333333333331" width="235" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Добавить"/>
                                 <connections>
                                     <action selector="addButtonDidTap:" destination="7tW-u5-vKb" eventType="touchUpInside" id="eKc-Eb-1So"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Номер округа" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CuE-1m-FD2">
-                                <rect key="frame" x="167" y="180.33333333333331" width="187" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Например: &quot;16&quot;" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CuE-1m-FD2">
+                                <rect key="frame" x="21" y="144.33333333333334" width="333" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="dA0-mi-Ylj"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название округа" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Y6-H3-dT8">
+                                <rect key="frame" x="21" y="119.99999999999999" width="333" height="19.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sPT-1p-X0t"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="4Y6-H3-dT8" firstAttribute="top" secondItem="jH2-7J-NdV" secondAttribute="bottom" constant="65" id="19x-Gf-KuW"/>
-                            <constraint firstItem="jH2-7J-NdV" firstAttribute="leading" secondItem="sPT-1p-X0t" secondAttribute="leading" constant="20" id="2wJ-S5-BkP"/>
                             <constraint firstItem="4Y6-H3-dT8" firstAttribute="leading" secondItem="xkh-Ds-ia5" secondAttribute="leadingMargin" constant="5" id="6gB-p2-aRI"/>
-                            <constraint firstItem="CuE-1m-FD2" firstAttribute="centerY" secondItem="4Y6-H3-dT8" secondAttribute="centerY" id="8Tb-ZQ-ilW"/>
                             <constraint firstItem="sPT-1p-X0t" firstAttribute="trailing" secondItem="gx3-nO-jff" secondAttribute="trailing" constant="70" id="FVs-Y0-xML"/>
                             <constraint firstItem="gx3-nO-jff" firstAttribute="leading" secondItem="sPT-1p-X0t" secondAttribute="leading" constant="70" id="Fgk-x9-bqu"/>
-                            <constraint firstItem="sPT-1p-X0t" firstAttribute="trailing" secondItem="jH2-7J-NdV" secondAttribute="trailing" constant="20" id="Fyn-v9-w0p"/>
+                            <constraint firstItem="4Y6-H3-dT8" firstAttribute="top" secondItem="sPT-1p-X0t" secondAttribute="top" constant="120" id="LUO-w4-QHh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CuE-1m-FD2" secondAttribute="trailing" constant="5" id="N7Q-dw-ptE"/>
-                            <constraint firstItem="CuE-1m-FD2" firstAttribute="leading" secondItem="4Y6-H3-dT8" secondAttribute="trailing" constant="10" id="haI-82-9mh"/>
+                            <constraint firstItem="CuE-1m-FD2" firstAttribute="top" secondItem="4Y6-H3-dT8" secondAttribute="bottom" constant="5" id="TeH-X8-5Cy"/>
+                            <constraint firstItem="CuE-1m-FD2" firstAttribute="leading" secondItem="xkh-Ds-ia5" secondAttribute="leadingMargin" constant="5" id="eDW-Cm-UHl"/>
+                            <constraint firstItem="4Y6-H3-dT8" firstAttribute="leading" secondItem="xkh-Ds-ia5" secondAttribute="leadingMargin" constant="5" id="h7j-Be-2vB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4Y6-H3-dT8" secondAttribute="trailing" constant="5" id="hnh-E4-VLd"/>
                             <constraint firstItem="gx3-nO-jff" firstAttribute="top" secondItem="CuE-1m-FD2" secondAttribute="bottom" constant="110" id="mr1-bp-Kf0"/>
-                            <constraint firstItem="jH2-7J-NdV" firstAttribute="top" secondItem="sPT-1p-X0t" secondAttribute="top" constant="100" id="wUv-Uc-Hq7"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="FLl-8s-XTW"/>
+                    <navigationItem key="navigationItem" title="Добавить округ" largeTitleDisplayMode="always" id="FLl-8s-XTW"/>
                     <connections>
                         <outlet property="addButton" destination="gx3-nO-jff" id="uDK-a2-sXD"/>
                         <outlet property="newCountyTextField" destination="CuE-1m-FD2" id="XBF-pj-xIl"/>
@@ -806,9 +800,439 @@
             </objects>
             <point key="canvasLocation" x="3868" y="-819"/>
         </scene>
+        <!--Добавить улицу-->
+        <scene sceneID="IMV-3I-JFm">
+            <objects>
+                <viewController storyboardIdentifier="NewStreetViewController" id="vfL-o4-aLW" customClass="NewStreetViewController" customModule="Korston_MD_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R4v-6i-2Ch">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WbC-jp-C3G">
+                                <rect key="frame" x="70" y="283.33333333333331" width="235" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Добавить"/>
+                                <connections>
+                                    <action selector="addButtonDidTap:" destination="vfL-o4-aLW" eventType="touchUpInside" id="UJx-7I-4XB"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Например: &quot;Ленина&quot;" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="f3X-JE-2R8">
+                                <rect key="frame" x="21" y="144.33333333333334" width="333" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="Zqc-P1-S4G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название улицы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lv4-WU-ekH">
+                                <rect key="frame" x="21" y="119.99999999999999" width="333" height="19.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kfK-ka-M7c"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="f3X-JE-2R8" firstAttribute="top" secondItem="lv4-WU-ekH" secondAttribute="bottom" constant="5" id="0wq-uh-560"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="f3X-JE-2R8" secondAttribute="trailing" constant="5" id="6GH-oa-w3q"/>
+                            <constraint firstItem="WbC-jp-C3G" firstAttribute="leading" secondItem="kfK-ka-M7c" secondAttribute="leading" constant="70" id="FhT-nc-wzx"/>
+                            <constraint firstItem="kfK-ka-M7c" firstAttribute="trailing" secondItem="WbC-jp-C3G" secondAttribute="trailing" constant="70" id="GbG-TX-nzp"/>
+                            <constraint firstItem="lv4-WU-ekH" firstAttribute="top" secondItem="kfK-ka-M7c" secondAttribute="top" constant="120" id="ML8-8I-piI"/>
+                            <constraint firstItem="f3X-JE-2R8" firstAttribute="leading" secondItem="R4v-6i-2Ch" secondAttribute="leadingMargin" constant="5" id="akc-Cr-hC5"/>
+                            <constraint firstItem="lv4-WU-ekH" firstAttribute="leading" secondItem="R4v-6i-2Ch" secondAttribute="leadingMargin" constant="5" id="b1o-Qi-xtW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lv4-WU-ekH" secondAttribute="trailing" constant="5" id="fJe-y7-geF"/>
+                            <constraint firstItem="lv4-WU-ekH" firstAttribute="leading" secondItem="R4v-6i-2Ch" secondAttribute="leadingMargin" constant="5" id="grJ-6W-8K7"/>
+                            <constraint firstItem="WbC-jp-C3G" firstAttribute="top" secondItem="f3X-JE-2R8" secondAttribute="bottom" constant="110" id="swf-Ba-Ygz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Добавить улицу" id="5DB-lf-IIJ"/>
+                    <connections>
+                        <outlet property="addButton" destination="WbC-jp-C3G" id="6D6-7C-utA"/>
+                        <outlet property="newStreetTextFIeld" destination="f3X-JE-2R8" id="2dj-jf-ZxK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sAp-bO-NYe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4633" y="-819"/>
+        </scene>
+        <!--Добавить дом-->
+        <scene sceneID="wWA-Vc-fjB">
+            <objects>
+                <viewController storyboardIdentifier="NewHouseViewController" modalPresentationStyle="pageSheet" id="Edf-mh-RrR" customClass="NewHouseViewController" customModule="Korston_MD_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="InN-0U-ePY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYG-k0-J1q">
+                                <rect key="frame" x="70" y="283.33333333333331" width="235" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Добавить"/>
+                                <connections>
+                                    <action selector="addButtonDidTap:" destination="Edf-mh-RrR" eventType="touchUpInside" id="oDC-8W-Kcb"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Например: &quot;8 Б&quot;" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ldg-W0-GXO">
+                                <rect key="frame" x="21" y="144.33333333333334" width="333" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="1hE-wl-RFZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название дома" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjG-jN-a85">
+                                <rect key="frame" x="21" y="119.99999999999999" width="333" height="19.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9Tj-PN-zKQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fjG-jN-a85" firstAttribute="leading" secondItem="InN-0U-ePY" secondAttribute="leadingMargin" constant="5" id="5xH-34-Mfb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fjG-jN-a85" secondAttribute="trailing" constant="5" id="LnY-hv-cHC"/>
+                            <constraint firstItem="fjG-jN-a85" firstAttribute="top" secondItem="9Tj-PN-zKQ" secondAttribute="top" constant="120" id="OI0-BP-IfR"/>
+                            <constraint firstItem="ldg-W0-GXO" firstAttribute="leading" secondItem="InN-0U-ePY" secondAttribute="leadingMargin" constant="5" id="Qk1-pe-2in"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ldg-W0-GXO" secondAttribute="trailing" constant="5" id="Qw5-rx-WuH"/>
+                            <constraint firstItem="fjG-jN-a85" firstAttribute="leading" secondItem="InN-0U-ePY" secondAttribute="leadingMargin" constant="5" id="SOP-XD-WTS"/>
+                            <constraint firstItem="BYG-k0-J1q" firstAttribute="leading" secondItem="9Tj-PN-zKQ" secondAttribute="leading" constant="70" id="ZeS-YD-TEZ"/>
+                            <constraint firstItem="BYG-k0-J1q" firstAttribute="top" secondItem="ldg-W0-GXO" secondAttribute="bottom" constant="110" id="j68-jo-fbD"/>
+                            <constraint firstItem="9Tj-PN-zKQ" firstAttribute="trailing" secondItem="BYG-k0-J1q" secondAttribute="trailing" constant="70" id="pq8-ww-vfi"/>
+                            <constraint firstItem="ldg-W0-GXO" firstAttribute="top" secondItem="fjG-jN-a85" secondAttribute="bottom" constant="5" id="tk7-Qe-IUi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Добавить дом" id="WUy-1Y-gKR"/>
+                    <connections>
+                        <outlet property="addButton" destination="BYG-k0-J1q" id="Vjs-3C-fGB"/>
+                        <outlet property="newHouseTextField" destination="ldg-W0-GXO" id="dIl-xO-VUq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gsc-50-BVw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5380" y="-819"/>
+        </scene>
+        <!--Добавить сторонника в актив-->
+        <scene sceneID="WKx-us-iU7">
+            <objects>
+                <viewController storyboardIdentifier="NewSupporterViewController" title="Добавить сторонника в актив" modalPresentationStyle="pageSheet" id="s8K-Rl-CWP" customClass="NewSupporterViewController" customModule="Korston_MD_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Inc-NY-ev6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TtX-AI-ccc">
+                                <rect key="frame" x="70" y="411" width="235" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Добавить"/>
+                                <connections>
+                                    <action selector="addButtonDidTap:" destination="s8K-Rl-CWP" eventType="touchUpInside" id="Txf-JH-qVe"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Например: &quot;Иванов Иван Иванович&quot;" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Olb-az-zzK">
+                                <rect key="frame" x="21" y="145" width="333" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="qzk-4H-NI3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ф.И.О." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECS-DC-98A">
+                                <rect key="frame" x="21" y="120" width="333" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Например: &quot;21&quot;" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2ku-nI-dNQ">
+                                <rect key="frame" x="21" y="214" width="333" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="an9-xZ-sxl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Номер квартиры" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6K-SR-JHR">
+                                <rect key="frame" x="21" y="189" width="333" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Например: &quot;89992314567&quot;" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="oNw-Bd-PDm">
+                                <rect key="frame" x="21" y="283" width="333" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="QR0-g2-9Kd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Номер телефона" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gu7-Tu-N0f">
+                                <rect key="frame" x="21" y="258" width="333" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Например: &quot;ivanov@mail.ru&quot;" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="OCh-a9-dgO">
+                                <rect key="frame" x="21" y="352" width="343" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="oRT-X8-5t3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail (необязательно)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TjW-PT-leP">
+                                <rect key="frame" x="21" y="327" width="343" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Usr-fm-iao"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OCh-a9-dgO" firstAttribute="trailing" secondItem="Inc-NY-ev6" secondAttribute="trailingMargin" constant="5" id="0uw-8v-eRn"/>
+                            <constraint firstItem="TtX-AI-ccc" firstAttribute="leading" secondItem="Usr-fm-iao" secondAttribute="leading" constant="70" id="2HA-w3-Aeq"/>
+                            <constraint firstItem="OCh-a9-dgO" firstAttribute="top" secondItem="TjW-PT-leP" secondAttribute="bottom" constant="5" id="6zQ-M9-zwJ"/>
+                            <constraint firstItem="ECS-DC-98A" firstAttribute="leading" secondItem="Inc-NY-ev6" secondAttribute="leadingMargin" constant="5" id="7Xw-Wv-2Kb"/>
+                            <constraint firstItem="gu7-Tu-N0f" firstAttribute="leading" secondItem="Inc-NY-ev6" secondAttribute="leadingMargin" constant="5" id="7oA-LP-QWP"/>
+                            <constraint firstItem="TjW-PT-leP" firstAttribute="leading" secondItem="Inc-NY-ev6" secondAttribute="leadingMargin" constant="5" id="Af2-WI-2A2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="w6K-SR-JHR" secondAttribute="trailing" constant="5" id="BNQ-AA-S4a"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oNw-Bd-PDm" secondAttribute="trailing" constant="5" id="BSa-1v-5mA"/>
+                            <constraint firstItem="OCh-a9-dgO" firstAttribute="leading" secondItem="Inc-NY-ev6" secondAttribute="leadingMargin" constant="5" id="ICs-KP-n6O"/>
+                            <constraint firstItem="w6K-SR-JHR" firstAttribute="top" secondItem="Olb-az-zzK" secondAttribute="bottom" constant="15" id="QpG-57-WAr"/>
+                            <constraint firstItem="Usr-fm-iao" firstAttribute="trailing" secondItem="TtX-AI-ccc" secondAttribute="trailing" constant="70" id="RVA-wM-6o8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2ku-nI-dNQ" secondAttribute="trailing" constant="5" id="US9-Yd-td6"/>
+                            <constraint firstItem="ECS-DC-98A" firstAttribute="top" secondItem="Usr-fm-iao" secondAttribute="top" constant="120" id="W9H-IU-azn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ECS-DC-98A" secondAttribute="trailing" constant="5" id="Xd2-t5-b0l"/>
+                            <constraint firstItem="oNw-Bd-PDm" firstAttribute="leading" secondItem="Inc-NY-ev6" secondAttribute="leadingMargin" constant="5" id="YTX-J3-F3O"/>
+                            <constraint firstItem="gu7-Tu-N0f" firstAttribute="top" secondItem="2ku-nI-dNQ" secondAttribute="bottom" constant="15" id="deF-97-uL8"/>
+                            <constraint firstItem="TjW-PT-leP" firstAttribute="trailing" secondItem="Inc-NY-ev6" secondAttribute="trailingMargin" constant="5" id="egf-zN-0xC"/>
+                            <constraint firstItem="2ku-nI-dNQ" firstAttribute="leading" secondItem="Inc-NY-ev6" secondAttribute="leadingMargin" constant="5" id="fob-kY-avO"/>
+                            <constraint firstItem="2ku-nI-dNQ" firstAttribute="top" secondItem="w6K-SR-JHR" secondAttribute="bottom" constant="5" id="gAI-Oz-3Cd"/>
+                            <constraint firstItem="Olb-az-zzK" firstAttribute="leading" secondItem="Inc-NY-ev6" secondAttribute="leadingMargin" constant="5" id="hzh-PG-Cj5"/>
+                            <constraint firstItem="TtX-AI-ccc" firstAttribute="top" secondItem="OCh-a9-dgO" secondAttribute="bottom" constant="30" id="m84-FS-NKP"/>
+                            <constraint firstItem="2ku-nI-dNQ" firstAttribute="top" secondItem="w6K-SR-JHR" secondAttribute="bottom" constant="5" id="n6y-4F-3om"/>
+                            <constraint firstItem="w6K-SR-JHR" firstAttribute="leading" secondItem="Inc-NY-ev6" secondAttribute="leadingMargin" constant="5" id="q0E-gG-ZcS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gu7-Tu-N0f" secondAttribute="trailing" constant="5" id="que-vG-RGf"/>
+                            <constraint firstItem="oNw-Bd-PDm" firstAttribute="top" secondItem="gu7-Tu-N0f" secondAttribute="bottom" constant="5" id="ry8-Bq-Bn0"/>
+                            <constraint firstItem="Olb-az-zzK" firstAttribute="top" secondItem="ECS-DC-98A" secondAttribute="bottom" constant="5" id="t4V-6X-0Lh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Olb-az-zzK" secondAttribute="trailing" constant="5" id="tX0-pR-u0x"/>
+                            <constraint firstItem="ECS-DC-98A" firstAttribute="leading" secondItem="Inc-NY-ev6" secondAttribute="leadingMargin" constant="5" id="viN-mW-3zB"/>
+                            <constraint firstItem="TjW-PT-leP" firstAttribute="top" secondItem="oNw-Bd-PDm" secondAttribute="bottom" constant="15" id="ziA-PT-uI5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Добавить сторонника в актив" id="Iug-PJ-ToW"/>
+                    <connections>
+                        <outlet property="addButton" destination="TtX-AI-ccc" id="ejC-BG-21f"/>
+                        <outlet property="apartmentTextField" destination="2ku-nI-dNQ" id="YaC-e1-k3l"/>
+                        <outlet property="emailTextField" destination="OCh-a9-dgO" id="eD2-j4-CXZ"/>
+                        <outlet property="nameTextField" destination="Olb-az-zzK" id="Zs7-zY-FSs"/>
+                        <outlet property="phoneTextField" destination="oNw-Bd-PDm" id="TPr-4O-1sq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k6n-6v-C6e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6932" y="-140"/>
+        </scene>
+        <!--Добавить сторонника в актив-->
+        <scene sceneID="c4Q-w5-N2B">
+            <objects>
+                <viewController storyboardIdentifier="NewPerformedImprovementViewController" title="Добавить сторонника в актив" modalPresentationStyle="pageSheet" id="h63-Qw-enD" customClass="NewPerformedImprovementViewController" customModule="Korston_MD_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EVZ-qV-91X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2Y-9V-Yht">
+                                <rect key="frame" x="70" y="342" width="235" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Добавить"/>
+                                <connections>
+                                    <action selector="addButtonDidTap:" destination="h63-Qw-enD" eventType="touchUpInside" id="fed-PD-ahd"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Например: &quot;УК &quot;Мой двор&quot;" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7bU-jQ-vJm">
+                                <rect key="frame" x="21" y="145" width="333" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="1Ed-dM-N1a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Подрядчик" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOc-uo-svy">
+                                <rect key="frame" x="21" y="120" width="333" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Например: &quot;01.01.20&quot;" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MmO-cg-meK">
+                                <rect key="frame" x="21" y="214" width="333" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="sSL-Yd-jxc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A00-br-Cbn">
+                                <rect key="frame" x="21" y="189" width="333" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Например: &quot;Опиловка деревьев&quot;" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="u1q-cg-yeb">
+                                <rect key="frame" x="21" y="283" width="333" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="0fp-aQ-m5p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название работы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUq-RU-Y8C">
+                                <rect key="frame" x="21" y="258" width="333" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kQm-5Q-HwB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OOc-uo-svy" firstAttribute="leading" secondItem="EVZ-qV-91X" secondAttribute="leadingMargin" constant="5" id="1Wr-ab-T4T"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7bU-jQ-vJm" secondAttribute="trailing" constant="5" id="1wc-xe-vRV"/>
+                            <constraint firstItem="OOc-uo-svy" firstAttribute="top" secondItem="kQm-5Q-HwB" secondAttribute="top" constant="120" id="3km-0l-Key"/>
+                            <constraint firstItem="U2Y-9V-Yht" firstAttribute="top" secondItem="u1q-cg-yeb" secondAttribute="bottom" constant="30" id="4Ew-nY-Z59"/>
+                            <constraint firstItem="EUq-RU-Y8C" firstAttribute="leading" secondItem="EVZ-qV-91X" secondAttribute="leadingMargin" constant="5" id="63Y-uZ-KF7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="u1q-cg-yeb" secondAttribute="trailing" constant="5" id="66X-oG-h0q"/>
+                            <constraint firstItem="u1q-cg-yeb" firstAttribute="leading" secondItem="EVZ-qV-91X" secondAttribute="leadingMargin" constant="5" id="Dd4-5c-nTr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="A00-br-Cbn" secondAttribute="trailing" constant="5" id="Dhc-fb-ER9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OOc-uo-svy" secondAttribute="trailing" constant="5" id="Fdb-Bi-euz"/>
+                            <constraint firstItem="OOc-uo-svy" firstAttribute="leading" secondItem="EVZ-qV-91X" secondAttribute="leadingMargin" constant="5" id="HI5-ym-z3B"/>
+                            <constraint firstItem="EUq-RU-Y8C" firstAttribute="top" secondItem="MmO-cg-meK" secondAttribute="bottom" constant="15" id="Lbj-Nk-XGW"/>
+                            <constraint firstItem="u1q-cg-yeb" firstAttribute="top" secondItem="EUq-RU-Y8C" secondAttribute="bottom" constant="5" id="Phr-t8-cFv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EUq-RU-Y8C" secondAttribute="trailing" constant="5" id="PpU-s0-YtE"/>
+                            <constraint firstItem="U2Y-9V-Yht" firstAttribute="leading" secondItem="kQm-5Q-HwB" secondAttribute="leading" constant="70" id="QRw-DB-tFD"/>
+                            <constraint firstItem="MmO-cg-meK" firstAttribute="leading" secondItem="EVZ-qV-91X" secondAttribute="leadingMargin" constant="5" id="XgD-a1-bHd"/>
+                            <constraint firstItem="A00-br-Cbn" firstAttribute="top" secondItem="7bU-jQ-vJm" secondAttribute="bottom" constant="15" id="ZuB-xk-rI6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MmO-cg-meK" secondAttribute="trailing" constant="5" id="eYY-7s-M3s"/>
+                            <constraint firstItem="MmO-cg-meK" firstAttribute="top" secondItem="A00-br-Cbn" secondAttribute="bottom" constant="5" id="hHB-Br-VDG"/>
+                            <constraint firstItem="A00-br-Cbn" firstAttribute="leading" secondItem="EVZ-qV-91X" secondAttribute="leadingMargin" constant="5" id="l6V-DL-tq3"/>
+                            <constraint firstItem="kQm-5Q-HwB" firstAttribute="trailing" secondItem="U2Y-9V-Yht" secondAttribute="trailing" constant="70" id="nyW-wF-oUi"/>
+                            <constraint firstItem="7bU-jQ-vJm" firstAttribute="leading" secondItem="EVZ-qV-91X" secondAttribute="leadingMargin" constant="5" id="reP-JO-WPd"/>
+                            <constraint firstItem="MmO-cg-meK" firstAttribute="top" secondItem="A00-br-Cbn" secondAttribute="bottom" constant="5" id="sSU-uh-oK0"/>
+                            <constraint firstItem="7bU-jQ-vJm" firstAttribute="top" secondItem="OOc-uo-svy" secondAttribute="bottom" constant="5" id="wwG-7I-QRN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Добавить выполненную работу" id="p7g-Ji-aKU"/>
+                    <connections>
+                        <outlet property="addButton" destination="U2Y-9V-Yht" id="JyO-gZ-QdJ"/>
+                        <outlet property="contractorNameTextField" destination="7bU-jQ-vJm" id="gCj-sl-APA"/>
+                        <outlet property="dateTextField" destination="MmO-cg-meK" id="UDS-LR-tzj"/>
+                        <outlet property="workNameTextField" destination="u1q-cg-yeb" id="PG4-wz-acC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NRP-N5-xI0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6932" y="587"/>
+        </scene>
+        <!--Добавить сторонника в актив-->
+        <scene sceneID="eIC-aN-9O5">
+            <objects>
+                <viewController storyboardIdentifier="NewPlannedImprovementViewController" title="Добавить сторонника в актив" modalPresentationStyle="pageSheet" id="Gg9-CZ-lu8" customClass="NewPlannedImprovementViewController" customModule="Korston_MD_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kmq-uV-ulS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzF-uR-HFo">
+                                <rect key="frame" x="70" y="342" width="235" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Добавить"/>
+                                <connections>
+                                    <action selector="addButtonDidTap:" destination="Gg9-CZ-lu8" eventType="touchUpInside" id="1n3-g1-aoe"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Например: &quot;УК &quot;Мой двор&quot;" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Msb-oV-uei">
+                                <rect key="frame" x="21" y="145" width="333" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="h0a-Z8-Xei"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Подрядчик" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QM4-kZ-OFj">
+                                <rect key="frame" x="21" y="120" width="333" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Например: &quot;01.01.20&quot;" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kc5-f5-qUw">
+                                <rect key="frame" x="21" y="214" width="333" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="GXv-f0-wTk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcr-Kr-kFX">
+                                <rect key="frame" x="21" y="189" width="333" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Например: &quot;Опиловка деревьев&quot;" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="FyZ-BB-2YK">
+                                <rect key="frame" x="21" y="283" width="333" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="Tcr-Tw-Sgm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название работы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kg3-ge-3hq">
+                                <rect key="frame" x="21" y="258" width="333" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="s3z-6W-uB2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kc5-f5-qUw" firstAttribute="top" secondItem="hcr-Kr-kFX" secondAttribute="bottom" constant="5" id="27t-CX-wjQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kc5-f5-qUw" secondAttribute="trailing" constant="5" id="2r2-1D-8E0"/>
+                            <constraint firstItem="Msb-oV-uei" firstAttribute="leading" secondItem="kmq-uV-ulS" secondAttribute="leadingMargin" constant="5" id="6VP-Iq-xJQ"/>
+                            <constraint firstItem="QM4-kZ-OFj" firstAttribute="top" secondItem="s3z-6W-uB2" secondAttribute="top" constant="120" id="E8b-xy-3pw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hcr-Kr-kFX" secondAttribute="trailing" constant="5" id="GfG-PB-8mW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kg3-ge-3hq" secondAttribute="trailing" constant="5" id="Gp0-9v-fFL"/>
+                            <constraint firstItem="kc5-f5-qUw" firstAttribute="leading" secondItem="kmq-uV-ulS" secondAttribute="leadingMargin" constant="5" id="HFe-Dj-4zY"/>
+                            <constraint firstItem="kc5-f5-qUw" firstAttribute="top" secondItem="hcr-Kr-kFX" secondAttribute="bottom" constant="5" id="JML-iI-34e"/>
+                            <constraint firstItem="FyZ-BB-2YK" firstAttribute="top" secondItem="Kg3-ge-3hq" secondAttribute="bottom" constant="5" id="R2e-Ew-vuv"/>
+                            <constraint firstItem="QM4-kZ-OFj" firstAttribute="leading" secondItem="kmq-uV-ulS" secondAttribute="leadingMargin" constant="5" id="UIJ-ej-MJ1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FyZ-BB-2YK" secondAttribute="trailing" constant="5" id="ZJk-HJ-Joy"/>
+                            <constraint firstItem="hcr-Kr-kFX" firstAttribute="top" secondItem="Msb-oV-uei" secondAttribute="bottom" constant="15" id="cRf-eN-ywI"/>
+                            <constraint firstItem="s3z-6W-uB2" firstAttribute="trailing" secondItem="tzF-uR-HFo" secondAttribute="trailing" constant="70" id="d6X-RP-O9C"/>
+                            <constraint firstItem="tzF-uR-HFo" firstAttribute="leading" secondItem="s3z-6W-uB2" secondAttribute="leading" constant="70" id="fMW-g6-42n"/>
+                            <constraint firstItem="QM4-kZ-OFj" firstAttribute="leading" secondItem="kmq-uV-ulS" secondAttribute="leadingMargin" constant="5" id="gtU-mp-eDg"/>
+                            <constraint firstItem="Kg3-ge-3hq" firstAttribute="top" secondItem="kc5-f5-qUw" secondAttribute="bottom" constant="15" id="i2B-6Z-SmV"/>
+                            <constraint firstItem="hcr-Kr-kFX" firstAttribute="leading" secondItem="kmq-uV-ulS" secondAttribute="leadingMargin" constant="5" id="iS9-3g-8Rg"/>
+                            <constraint firstItem="tzF-uR-HFo" firstAttribute="top" secondItem="FyZ-BB-2YK" secondAttribute="bottom" constant="30" id="kDr-0P-hCa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Msb-oV-uei" secondAttribute="trailing" constant="5" id="miF-Hl-Ux8"/>
+                            <constraint firstItem="Msb-oV-uei" firstAttribute="top" secondItem="QM4-kZ-OFj" secondAttribute="bottom" constant="5" id="q6o-Uk-Wfh"/>
+                            <constraint firstItem="Kg3-ge-3hq" firstAttribute="leading" secondItem="kmq-uV-ulS" secondAttribute="leadingMargin" constant="5" id="ucU-X7-I1K"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QM4-kZ-OFj" secondAttribute="trailing" constant="5" id="woR-eH-dfb"/>
+                            <constraint firstItem="FyZ-BB-2YK" firstAttribute="leading" secondItem="kmq-uV-ulS" secondAttribute="leadingMargin" constant="5" id="yFp-df-3XV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Добавить запланированную работу" id="6Ct-wN-uJS"/>
+                    <connections>
+                        <outlet property="addButton" destination="tzF-uR-HFo" id="95j-H2-Oyg"/>
+                        <outlet property="contractorNameTextField" destination="Msb-oV-uei" id="VVP-Kc-o4j"/>
+                        <outlet property="dateTextField" destination="kc5-f5-qUw" id="EJ3-My-9Xf"/>
+                        <outlet property="workNameTextField" destination="FyZ-BB-2YK" id="D15-Ra-rLv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14x-nA-nNF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6932" y="1278"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tdG-oB-Ehr"/>
+        <segue reference="fc1-sh-n6e"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

@@ -18,7 +18,6 @@ class LoginViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         setUpElements()
-        // Do any additional setup after loading the view.
     }
     
     func setUpElements() {
@@ -26,7 +25,6 @@ class LoginViewController: UIViewController {
         StyleButtonsFields.styleTextField(loginTextField)
         StyleButtonsFields.styleTextField(passwordTextField)
         StyleButtonsFields.styleFilledButton(loginButton)
-        
     }
 
     /*
@@ -41,13 +39,13 @@ class LoginViewController: UIViewController {
     @IBAction func loginButtonTapped(_ sender: UIButton) {
         Auth.auth().signIn(withEmail: loginTextField.text!, password: passwordTextField.text!) { [weak self] (result, error) in
             if let error = error {
-                let alert = UIAlertController(title: "Ошибка!", message: "Логин/пароль введены неверно", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Ошибка!", message: "Логин/пароль введены неверно \(error.localizedDescription)", preferredStyle: .alert)
                 let cancelAction = UIAlertAction(title: "ОК", style: .cancel, handler: nil)
                 alert.addAction(cancelAction)
                 self?.present(alert, animated: true, completion: nil)
             } else {
-                AuthManager.shared.isAuthorized.toggle()
-                self?.performSegue(withIdentifier: "loginSegue", sender: nil)
+                AuthManager.shared.isAuthorized = true
+//                self?.performSegue(withIdentifier: "loginSegue", sender: nil)
             }
         }
     }

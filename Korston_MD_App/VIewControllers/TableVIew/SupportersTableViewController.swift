@@ -8,8 +8,11 @@
 import UIKit
 
 class SupportersTableViewController: UITableViewController {
-
+    //MARK: - Outlets
+    @IBOutlet weak var addButtonItem: UIBarButtonItem!
+    
     //MARK: - Properties
+    let auth = AuthManager.shared
     var reuseIdentifier = "SupporterTableViewCell"
     var districtId = ""
     var countyId = ""
@@ -19,8 +22,13 @@ class SupportersTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if auth.isAuthorized {
+            addButtonItem.isEnabled = true
+        } else {
+            addButtonItem.isEnabled = false
+        }
+        configureRefreshControl()
         loadRoomers()
-        
     }
 
     // MARK: - Table view data source
@@ -49,6 +57,16 @@ class SupportersTableViewController: UITableViewController {
         
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addSupporter" {
+            let destination = segue.destination as! NewSupporterViewController
+            destination.districtId = districtId
+            destination.countyId = countyId
+            destination.streetId = streetId
+            destination.houseId = houseId
+        }
+    }
 
     
     //MARK: - Helpers
@@ -59,6 +77,16 @@ class SupportersTableViewController: UITableViewController {
                 self?.tableView.reloadData()
             }
         }
+    }
+    
+    func configureRefreshControl() {
+        self.refreshControl?.attributedTitle = NSAttributedString(string: "Pull down to refresh")
+        self.refreshControl?.addTarget(self, action: #selector(self.refreshTable(_:)), for: .valueChanged)
+    }
+    
+    @objc func refreshTable(_ sender: Any?) {
+        loadRoomers()
+        refreshControl?.endRefreshing()
     }
 
 }

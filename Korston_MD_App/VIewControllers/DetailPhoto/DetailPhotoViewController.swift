@@ -18,5 +18,4 @@ class DetailPhotoViewController: UIViewController {
         super.viewDidLoad()
         self.houseImage.image = image
     }
-    
 }

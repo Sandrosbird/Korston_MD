@@ -8,8 +8,11 @@
 import UIKit
 
 class PerformedImprovementsTableViewController: UITableViewController {
-
+    //MARK: - Outlets
+    @IBOutlet weak var addButtonItem: UIBarButtonItem!
+    
     //MARK: - Properties
+    let auth = AuthManager.shared
     var improvementsArray: [ImprovementFirebase] = []
     var districtId = ""
     var countyId = ""
@@ -18,6 +21,12 @@ class PerformedImprovementsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if auth.isAuthorized {
+            addButtonItem.isEnabled = true
+        } else {
+            addButtonItem.isEnabled = false
+        }
+        configureRefreshControl()
         loadImprovements()
     }
 
@@ -45,6 +54,16 @@ class PerformedImprovementsTableViewController: UITableViewController {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addPerformedImprovement" {
+            let destination = segue.destination as! NewPerformedImprovementViewController
+            destination.districtId = districtId
+            destination.countyId = countyId
+            destination.streetId = streetId
+            destination.houseId = houseId
+        }
+    }
+    
     //MARK: - Helpers
     func loadImprovements(completion: (() -> Void)? = nil) {
         FirestoreManager.shared.getJobsFor(districtId: districtId, countyId: countyId, streetId: streetId, houseId: houseId, type: .jobsDone) { [weak self] improvements in
@@ -55,6 +74,14 @@ class PerformedImprovementsTableViewController: UITableViewController {
             }
         }
     }
-
-
+    
+    func configureRefreshControl() {
+        self.refreshControl?.attributedTitle = NSAttributedString(string: "Pull down to refresh")
+        self.refreshControl?.addTarget(self, action: #selector(self.refreshTable(_:)), for: .valueChanged)
+    }
+    
+    @objc func refreshTable(_ sender: Any?) {
+        loadImprovements()
+        refreshControl?.endRefreshing()
+    }
 }

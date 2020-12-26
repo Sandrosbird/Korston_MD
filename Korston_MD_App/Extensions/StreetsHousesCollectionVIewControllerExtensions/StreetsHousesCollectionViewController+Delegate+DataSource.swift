@@ -58,6 +58,7 @@ extension StreetsHousesCollectionViewController {
                 destination.streetId = self.streetId
                 destination.houseId = houseId
                 destination.imageFolderPath = house.imagePath
+                
                 self.show(destination, sender: nil)
             }
             

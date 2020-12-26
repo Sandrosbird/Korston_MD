@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		4D630FEE0E6093A61FDF1F3E /* Pods_Korston_MD_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73B72E82CBFA5B500A8AD46C /* Pods_Korston_MD_AppTests.framework */; };
+		760670232594B70D0082AAF6 /* HousePhotosCollectionViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760670222594B70D0082AAF6 /* HousePhotosCollectionViewController+DataSource.swift */; };
+		7606702B2594BA2C0082AAF6 /* HousePhotosCollectionViewController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7606702A2594BA2C0082AAF6 /* HousePhotosCollectionViewController+Helpers.swift */; };
+		7606702F2594BC520082AAF6 /* HousePhotosCollectionViewController+ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7606702E2594BC520082AAF6 /* HousePhotosCollectionViewController+ImagePicker.swift */; };
+		7606703B2595EEE40082AAF6 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7606703A2595EEE40082AAF6 /* DateExtension.swift */; };
+		764C69282593404400BE2E6F /* NewStreetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764C69272593404400BE2E6F /* NewStreetViewController.swift */; };
+		764C692C259347CB00BE2E6F /* NewHouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764C692B259347CB00BE2E6F /* NewHouseViewController.swift */; };
+		764C693025949DCD00BE2E6F /* NewSupporterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764C692F25949DCD00BE2E6F /* NewSupporterViewController.swift */; };
+		764C69342594A5B000BE2E6F /* NewPerformedImprovementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764C69332594A5B000BE2E6F /* NewPerformedImprovementViewController.swift */; };
+		764C69382594AA5100BE2E6F /* NewPlannedImprovementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764C69372594AA5100BE2E6F /* NewPlannedImprovementViewController.swift */; };
 		764CFBEA257D57F60050ECA9 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 764CFBE9257D57EB0050ECA9 /* libsqlite3.tbd */; };
 		7676F006258B450100CD0506 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7676F005258B450100CD0506 /* AuthManager.swift */; };
 		76A81558258A06AD003FC536 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A81557258A06AD003FC536 /* SignUpViewController.swift */; };
@@ -42,8 +51,6 @@
 		76D3244125652871007C4B82 /* DistrictCountiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D3244025652871007C4B82 /* DistrictCountiesTableViewController.swift */; };
 		76D3244A25652F7A007C4B82 /* CityDistrictTableVIewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D3244925652F7A007C4B82 /* CityDistrictTableVIewController+DataSource.swift */; };
 		76D3245225652FED007C4B82 /* CityDistrictTableViewController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D3245125652FED007C4B82 /* CityDistrictTableViewController+Helpers.swift */; };
-		76D3246A2565384A007C4B82 /* (OLD)StreetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D324692565384A007C4B82 /* (OLD)StreetCollectionViewCell.swift */; };
-		76D3246F256668F9007C4B82 /* (OLD)CountyStreetsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D3246E256668F9007C4B82 /* (OLD)CountyStreetsCollectionViewController.swift */; };
 		76D32475256669D6007C4B82 /* DistrictCountiesTableViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D32474256669D6007C4B82 /* DistrictCountiesTableViewController+DataSource.swift */; };
 		76D3247D256669E1007C4B82 /* DistrictCountiesTableViewController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D3247C256669E1007C4B82 /* DistrictCountiesTableViewController+Helpers.swift */; };
 		76E8CCA32569123B00F7C91D /* StreetsHousesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E8CCA22569123B00F7C91D /* StreetsHousesCollectionViewController.swift */; };
@@ -54,7 +61,7 @@
 		76EDFE46257A3A29002316FA /* PlannedImprovementTableVIewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EDFE44257A3A29002316FA /* PlannedImprovementTableVIewCell.swift */; };
 		76EDFE47257A3A29002316FA /* PerformedImprovementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EDFE45257A3A29002316FA /* PerformedImprovementTableViewCell.swift */; };
 		76EDFE4C257A3C6E002316FA /* (OLD)StreetUICollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EDFE4B257A3C6E002316FA /* (OLD)StreetUICollectionViewLayout.swift */; };
-		76FD7910256E5F7600948422 /* HousePhotosCollectionVIewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD790F256E5F7600948422 /* HousePhotosCollectionVIewLayout.swift */; };
+		76FD7910256E5F7600948422 /* HousePhotosCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD790F256E5F7600948422 /* HousePhotosCollectionViewLayout.swift */; };
 		76FD7915256E618800948422 /* HousePhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD7914256E618800948422 /* HousePhotosCollectionViewController.swift */; };
 		76FD7929256F995C00948422 /* StreetsHousesCollectionViewController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD7928256F995C00948422 /* StreetsHousesCollectionViewController+Helpers.swift */; };
 		76FD7931256F996B00948422 /* StreetsHousesCollectionViewController+Delegate+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FD7930256F996B00948422 /* StreetsHousesCollectionViewController+Delegate+DataSource.swift */; };
@@ -101,6 +108,15 @@
 		4D0979980880E73590E4ED4F /* Pods-Korston_MD_AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Korston_MD_AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Korston_MD_AppTests/Pods-Korston_MD_AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		667443A73C460BF07C42E3B5 /* Pods-Korston_MD_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Korston_MD_App.release.xcconfig"; path = "Target Support Files/Pods-Korston_MD_App/Pods-Korston_MD_App.release.xcconfig"; sourceTree = "<group>"; };
 		73B72E82CBFA5B500A8AD46C /* Pods_Korston_MD_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Korston_MD_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		760670222594B70D0082AAF6 /* HousePhotosCollectionViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HousePhotosCollectionViewController+DataSource.swift"; sourceTree = "<group>"; };
+		7606702A2594BA2C0082AAF6 /* HousePhotosCollectionViewController+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HousePhotosCollectionViewController+Helpers.swift"; sourceTree = "<group>"; };
+		7606702E2594BC520082AAF6 /* HousePhotosCollectionViewController+ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HousePhotosCollectionViewController+ImagePicker.swift"; sourceTree = "<group>"; };
+		7606703A2595EEE40082AAF6 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		764C69272593404400BE2E6F /* NewStreetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewStreetViewController.swift; sourceTree = "<group>"; };
+		764C692B259347CB00BE2E6F /* NewHouseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHouseViewController.swift; sourceTree = "<group>"; };
+		764C692F25949DCD00BE2E6F /* NewSupporterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSupporterViewController.swift; sourceTree = "<group>"; };
+		764C69332594A5B000BE2E6F /* NewPerformedImprovementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPerformedImprovementViewController.swift; sourceTree = "<group>"; };
+		764C69372594AA5100BE2E6F /* NewPlannedImprovementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlannedImprovementViewController.swift; sourceTree = "<group>"; };
 		764CFBE9257D57EB0050ECA9 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		7676F005258B450100CD0506 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		76A81557258A06AD003FC536 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -144,8 +160,6 @@
 		76D3244025652871007C4B82 /* DistrictCountiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictCountiesTableViewController.swift; sourceTree = "<group>"; };
 		76D3244925652F7A007C4B82 /* CityDistrictTableVIewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CityDistrictTableVIewController+DataSource.swift"; sourceTree = "<group>"; };
 		76D3245125652FED007C4B82 /* CityDistrictTableViewController+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CityDistrictTableViewController+Helpers.swift"; sourceTree = "<group>"; };
-		76D324692565384A007C4B82 /* (OLD)StreetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "(OLD)StreetCollectionViewCell.swift"; sourceTree = "<group>"; };
-		76D3246E256668F9007C4B82 /* (OLD)CountyStreetsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "(OLD)CountyStreetsCollectionViewController.swift"; sourceTree = "<group>"; };
 		76D32474256669D6007C4B82 /* DistrictCountiesTableViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DistrictCountiesTableViewController+DataSource.swift"; sourceTree = "<group>"; };
 		76D3247C256669E1007C4B82 /* DistrictCountiesTableViewController+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DistrictCountiesTableViewController+Helpers.swift"; sourceTree = "<group>"; };
 		76E8CCA22569123B00F7C91D /* StreetsHousesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetsHousesCollectionViewController.swift; sourceTree = "<group>"; };
@@ -156,7 +170,7 @@
 		76EDFE44257A3A29002316FA /* PlannedImprovementTableVIewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlannedImprovementTableVIewCell.swift; sourceTree = "<group>"; };
 		76EDFE45257A3A29002316FA /* PerformedImprovementTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformedImprovementTableViewCell.swift; sourceTree = "<group>"; };
 		76EDFE4B257A3C6E002316FA /* (OLD)StreetUICollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "(OLD)StreetUICollectionViewLayout.swift"; sourceTree = "<group>"; };
-		76FD790F256E5F7600948422 /* HousePhotosCollectionVIewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousePhotosCollectionVIewLayout.swift; sourceTree = "<group>"; };
+		76FD790F256E5F7600948422 /* HousePhotosCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousePhotosCollectionViewLayout.swift; sourceTree = "<group>"; };
 		76FD7914256E618800948422 /* HousePhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousePhotosCollectionViewController.swift; sourceTree = "<group>"; };
 		76FD7928256F995C00948422 /* StreetsHousesCollectionViewController+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StreetsHousesCollectionViewController+Helpers.swift"; sourceTree = "<group>"; };
 		76FD7930256F996B00948422 /* StreetsHousesCollectionViewController+Delegate+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StreetsHousesCollectionViewController+Delegate+DataSource.swift"; sourceTree = "<group>"; };
@@ -227,6 +241,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		760670212594B6CE0082AAF6 /* HousePhotosCollectionVIewControllerExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				760670222594B70D0082AAF6 /* HousePhotosCollectionViewController+DataSource.swift */,
+				7606702A2594BA2C0082AAF6 /* HousePhotosCollectionViewController+Helpers.swift */,
+				7606702E2594BC520082AAF6 /* HousePhotosCollectionViewController+ImagePicker.swift */,
+			);
+			path = HousePhotosCollectionVIewControllerExtensions;
+			sourceTree = "<group>";
+		};
 		76A8155F258A1497003FC536 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +266,11 @@
 				76A8155B258A100C003FC536 /* LoginViewController.swift */,
 				76B8D8802592013E003B4EBE /* NewDistrictVIewController.swift */,
 				76B8D89F259219E1003B4EBE /* NewCountyViewController.swift */,
+				764C69272593404400BE2E6F /* NewStreetViewController.swift */,
+				764C692B259347CB00BE2E6F /* NewHouseViewController.swift */,
+				764C692F25949DCD00BE2E6F /* NewSupporterViewController.swift */,
+				764C69332594A5B000BE2E6F /* NewPerformedImprovementViewController.swift */,
+				764C69372594AA5100BE2E6F /* NewPlannedImprovementViewController.swift */,
 			);
 			path = CustomViewControllers;
 			sourceTree = "<group>";
@@ -353,7 +382,9 @@
 				76D324732566699A007C4B82 /* DistrictCountiesTableViewControllerExtensions */,
 				76C76C0A257E7645006BA3BC /* CountyStreetsTableVIewControllerExtensions */,
 				76FD7927256F991A00948422 /* StreetsHousesCollectionVIewControllerExtensions */,
+				760670212594B6CE0082AAF6 /* HousePhotosCollectionVIewControllerExtensions */,
 				76B8D87A25909955003B4EBE /* UITableVIewExtensions.swift */,
+				7606703A2595EEE40082AAF6 /* DateExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -381,7 +412,7 @@
 			children = (
 				76EDFE4B257A3C6E002316FA /* (OLD)StreetUICollectionViewLayout.swift */,
 				76E8CCA72569150800F7C91D /* HouseUICollectionVIewLayout.swift */,
-				76FD790F256E5F7600948422 /* HousePhotosCollectionVIewLayout.swift */,
+				76FD790F256E5F7600948422 /* HousePhotosCollectionViewLayout.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -389,7 +420,6 @@
 		76E8CCAD256916E300F7C91D /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				76D324692565384A007C4B82 /* (OLD)StreetCollectionViewCell.swift */,
 				76E8CCAE2569170D00F7C91D /* HouseUICollectionViewCell.swift */,
 				76FD793B256F9DA200948422 /* HousePhotosCollectionViewCell.swift */,
 			);
@@ -413,7 +443,6 @@
 		76E8CCB72569187D00F7C91D /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				76D3246E256668F9007C4B82 /* (OLD)CountyStreetsCollectionViewController.swift */,
 				76E8CCA22569123B00F7C91D /* StreetsHousesCollectionViewController.swift */,
 				76FD7914256E618800948422 /* HousePhotosCollectionViewController.swift */,
 				76E8CCAD256916E300F7C91D /* Cell */,
@@ -693,12 +722,14 @@
 			files = (
 				76FD7949256FB2DF00948422 /* SupportersTableViewController.swift in Sources */,
 				76B8D87B25909955003B4EBE /* UITableVIewExtensions.swift in Sources */,
+				764C69282593404400BE2E6F /* NewStreetViewController.swift in Sources */,
 				76EDFE46257A3A29002316FA /* PlannedImprovementTableVIewCell.swift in Sources */,
 				76B8D8A0259219E1003B4EBE /* NewCountyViewController.swift in Sources */,
+				764C69382594AA5100BE2E6F /* NewPlannedImprovementViewController.swift in Sources */,
 				76D323CB2563B3FA007C4B82 /* AppDelegate.swift in Sources */,
 				76EDFE47257A3A29002316FA /* PerformedImprovementTableViewCell.swift in Sources */,
 				76C76C12257E7694006BA3BC /* CountyStreetsTableViewController+Helpers.swift in Sources */,
-				76D3246A2565384A007C4B82 /* (OLD)StreetCollectionViewCell.swift in Sources */,
+				7606703B2595EEE40082AAF6 /* DateExtension.swift in Sources */,
 				76D3244125652871007C4B82 /* DistrictCountiesTableViewController.swift in Sources */,
 				7676F006258B450100CD0506 /* AuthManager.swift in Sources */,
 				76C5833E257FB00E004B33CA /* DetailPhotoViewController.swift in Sources */,
@@ -721,20 +752,25 @@
 				76D32475256669D6007C4B82 /* DistrictCountiesTableViewController+DataSource.swift in Sources */,
 				76D3245225652FED007C4B82 /* CityDistrictTableViewController+Helpers.swift in Sources */,
 				76C76C0C257E766B006BA3BC /* CountyStreetsTableViewController+DataSource.swift in Sources */,
-				76D3246F256668F9007C4B82 /* (OLD)CountyStreetsCollectionViewController.swift in Sources */,
 				76E8CCA32569123B00F7C91D /* StreetsHousesCollectionViewController.swift in Sources */,
 				76FD7915256E618800948422 /* HousePhotosCollectionViewController.swift in Sources */,
 				76EDFE3D257A39FC002316FA /* PlannedImprovementsTableViewController.swift in Sources */,
+				7606702F2594BC520082AAF6 /* HousePhotosCollectionViewController+ImagePicker.swift in Sources */,
 				76D323CD2563B3FA007C4B82 /* SceneDelegate.swift in Sources */,
 				76E8CCA82569150800F7C91D /* HouseUICollectionVIewLayout.swift in Sources */,
 				76FD794E256FB4DE00948422 /* SupporterTableVIewCell.swift in Sources */,
 				76D3244A25652F7A007C4B82 /* CityDistrictTableVIewController+DataSource.swift in Sources */,
 				76A81558258A06AD003FC536 /* SignUpViewController.swift in Sources */,
 				76C58388258266A5004B33CA /* FirestoreManager.swift in Sources */,
+				764C69342594A5B000BE2E6F /* NewPerformedImprovementViewController.swift in Sources */,
+				7606702B2594BA2C0082AAF6 /* HousePhotosCollectionViewController+Helpers.swift in Sources */,
 				76FD7929256F995C00948422 /* StreetsHousesCollectionViewController+Helpers.swift in Sources */,
+				764C693025949DCD00BE2E6F /* NewSupporterViewController.swift in Sources */,
 				76C583B22583BCD4004B33CA /* HouseFirebase.swift in Sources */,
 				76A81561258A14A8003FC536 /* StyleButtonsFields.swift in Sources */,
-				76FD7910256E5F7600948422 /* HousePhotosCollectionVIewLayout.swift in Sources */,
+				760670232594B70D0082AAF6 /* HousePhotosCollectionViewController+DataSource.swift in Sources */,
+				764C692C259347CB00BE2E6F /* NewHouseViewController.swift in Sources */,
+				76FD7910256E5F7600948422 /* HousePhotosCollectionViewLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

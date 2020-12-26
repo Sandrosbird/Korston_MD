@@ -10,19 +10,31 @@ import UIKit
 extension CountyStreetsTableViewController {
     //MARK: - Helpers
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addStreet" {
+            let destination = segue.destination as! NewStreetViewController
+            destination.districtId = districtId
+            destination.countyId = countyId
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        //        let streets = countiesArray[indexPath.row]
-        let streetId = streetsArray[indexPath.row].id
-        idTransfer(streetId: streetId, districtId: districtId, countyId: countyId)
+        let street = streetsArray[indexPath.row]
+        let streetId = street.id
+        let streetName = street.name
+        idTransfer(streetId: streetId, districtId: districtId, countyId: countyId, streetName: streetName, countyName: countyName, districtName: districtName)
         return indexPath
     }
     
-    private func idTransfer(streetId: String, districtId: String, countyId: String) {
+    private func idTransfer(streetId: String, districtId: String, countyId: String, streetName: String, countyName: String, districtName: String) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let destination = storyboard.instantiateViewController(identifier: "StreetsHousesCollectionViewController") as? StreetsHousesCollectionViewController else { return }
         destination.streetId = streetId
         destination.countyId = countyId
         destination.districtId = districtId
+        destination.streetName = streetName
+        destination.countyName = countyName
+        destination.districtName = districtName
         show(destination, sender: nil)
     }
     

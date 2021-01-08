@@ -21,7 +21,6 @@ class HousePhotosCollectionViewLayout: UICollectionViewFlowLayout {
         let itemsCount = collectionView.numberOfItems(inSection: 0)
         guard itemsCount > 0 else { return }
         
-        let bigCellWidth = collectionView.frame.width / CGFloat(self.columnsCount)
         let smallCellWidth = collectionView.frame.width / CGFloat(self.columnsCount)
         
         var lastX: CGFloat = 0

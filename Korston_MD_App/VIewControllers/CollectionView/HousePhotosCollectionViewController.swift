@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DropDown
 
 class HousePhotosCollectionViewController: UICollectionViewController {
     //MARK: - Outlets
@@ -22,6 +23,7 @@ class HousePhotosCollectionViewController: UICollectionViewController {
     var houseId = ""
     var photoPaths: [String] = []
     var imageFolderPath = ""
+    let dropDown = DropDown()
     
     var photosArray: [UIImage] = [] {
         didSet {
@@ -49,5 +51,18 @@ class HousePhotosCollectionViewController: UICollectionViewController {
         downloadPhotos()
         
     }
+ 
+    //MARK: - Actions
+    @IBAction func addButtonDidTap(_ sender: Any) {
+        if #available(iOS 14.0, *) {
+            addButtonItem.primaryAction = nil
+        } else {
+            dropDown.anchorView = addButtonItem
+            dropDown.width = 140
+            showDropDown()
+        }
+    }
+    
+    
 }
 

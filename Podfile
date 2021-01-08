@@ -9,6 +9,7 @@ target 'Korston_MD_App' do
   pod 'Firebase/Firestore', '~> 7.3.0'
   pod 'Firebase/Storage', '~> 7.3.0'
   pod 'Firebase/Auth', '~> 7.3.0'
+  pod 'DropDown', '2.3.13'
 
   # Pods for Korston_MD_App
 

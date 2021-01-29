@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1008053865391-0cur8ana5blj6t50jt5t8ls33tqq2egt.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1008053865391-0cur8ana5blj6t50jt5t8ls33tqq2egt</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBrJ4UXyHbPdwJcJ_3xZKTL3vZ2d423ADo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1008053865391</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.Emil-A-M.Korston-MD-App</string>
+	<key>PROJECT_ID</key>
+	<string>municipal-deputy-app</string>
+	<key>STORAGE_BUCKET</key>
+	<string>municipal-deputy-app.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1008053865391:ios:75055ba741d93e86197d5a</string>
+</dict>
+</plist>
